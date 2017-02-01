@@ -7,6 +7,8 @@ class Students
     {
         $title    = "Qeydiyyat | Devcenter";
 
+        $courses = Course::all();
+
         require_once '../app/views/student/register.php';
     }
 
@@ -76,6 +78,15 @@ class Students
         }
 
         header('location: /cpanel/public/students/index');
+    }
+
+    public function course()
+    {
+        $id =  $_POST['id'];
+
+        $course = Course::find($id);
+
+        //to do
     }
 
 }

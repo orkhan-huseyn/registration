@@ -7,7 +7,7 @@ class App
 
     protected $action;
 
-    protected $routes = array('students' => ['register', 'post']);
+    protected $routes = array('students' => ['register', 'post', 'course']);
 
 
     public function __construct()
@@ -60,6 +60,7 @@ class App
             case 'students':
 
                 require_once '../app/models/Student.php';
+                require_once '../app/models/Course.php';
                 require_once '../app/models/Education.php';
                 require_once '../app/models/Experience.php';
                 require_once '../app/models/FamilyInfo.php';
