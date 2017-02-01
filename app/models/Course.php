@@ -12,6 +12,8 @@ class Course
 
     public $instructor_id;
 
+    //comment
+
 
     public function __construct($course_id, $course_name, $description, $syllabus_path, $instructor_id)
     {
