@@ -86,7 +86,11 @@ class Students
 
         $course = Course::find($id);
 
-        $json = array('instructor' => $course->instructor_id, 'description' => $course->description);
+        $instructor = Instructor::find($course->instructor_id);
+
+        $full_name = $instructor->last_name.' '.$instructor->first_name.' '.$instructor->fathers_name;
+
+        $json = array('instructor' => $full_name, 'description' => $course->description);
 
         echo json_encode($json);
     }
