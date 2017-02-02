@@ -86,7 +86,9 @@ class Students
 
         $course = Course::find($id);
 
-        //to do
+        $json = array('instructor' => $course->instructor_id, 'description' => $course->description);
+
+        echo json_encode($json);
     }
 
 }
