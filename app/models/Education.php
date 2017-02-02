@@ -58,8 +58,8 @@ class Education
     {
         $conn = Database::getInstance();
 
-        $stmt = $conn->prepare("INSERT INTO education (education_id, student_id, education_level, institution, start_date, end_date) "
-            ."VALUES (:education_id, :student_id, :education_level, :institution, :start_date, :end_date)");
+        $stmt = $conn->prepare("INSERT INTO education (education_id, student_id, education_level, institution, major, start_date, end_date) "
+            ."VALUES (:education_id, :student_id, :education_level, :institution, :major, :start_date, :end_date)");
 
         $stmt->bindParam(":education_id",    $education_id);
 

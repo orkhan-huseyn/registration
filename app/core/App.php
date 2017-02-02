@@ -57,6 +57,7 @@ class App
 
                 require_once '../app/models/Student.php';
                 require_once '../app/models/Course.php';
+                require_once '../app/models/Enrollment.php';
                 require_once '../app/models/Instructor.php';
                 require_once '../app/models/Education.php';
                 require_once '../app/models/Experience.php';

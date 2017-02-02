@@ -35,7 +35,7 @@ class ItKnowledge
 
         foreach ($stmt->fetchAll() as $tech_knowledge)
         {
-            $list[] = new LangKnowledge($tech_knowledge['knowledge_id'], $tech_knowledge['student_id'],
+            $list[] = new ItKnowledge($tech_knowledge['knowledge_id'], $tech_knowledge['student_id'],
                 $tech_knowledge['technology'], $tech_knowledge['knowledge_level']);
         }
 

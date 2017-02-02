@@ -41,10 +41,14 @@ class Students
 
         $education_count = count($education_level);
 
+
         $company             = $_POST['company'];
         $position            = $_POST['position'];
-        $start_date          = $_POST['start_date'];
-        $end_date            = $_POST['end_date'];
+        $ex_start_month      = $_POST['ex_start_month'];
+        $ex_start_year       = $_POST['ex_start_year'];
+        $ex_end_month        = $_POST['ex_end_month'];
+        $ex_end_year         = $_POST['ex_end_year'];
+        $job_description     = $_POST['job_description'];
 
         $experience_count = count($company);
 
@@ -66,12 +70,42 @@ class Students
 
         $member_count = count($member_address);
 
+        $course_id = $_POST['course'];
+
         $uuid = UUID::v4();
 
         if($student_id==0)
         {
             Student::insert($uuid, $serial_id, 'public/img/profile/student/'.FormHandler::upload('profile_img', '../../cpanel/public/img/profile/student/'), $first_name, $last_name, $fathers_name,
                 $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
+
+            for($i=0; $i < $education_count; $i++)
+            {
+                Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]);
+            }
+
+            for ($i=0; $i < $experience_count; $i++)
+            {
+                Experience::insert(UUID::v4(), $uuid, $company[$i], $position[$i], $job_description[$i], $ex_start_month[$i].' '.$ex_start_year[$i], $ex_end_month[$i].' '.$ex_end_year[$i]);
+            }
+
+            for ($i=0; $i < $lang_count; $i++)
+            {
+                LangKnowledge::insert(UUID::v4(), $uuid, $lang[$i], $lang_level[$i]);
+            }
+
+            for ($i=0; $i < $it_count; $i++)
+            {
+                ItKnowledge::insert(UUID::v4(), $uuid, $it[$i], $it_level[$i]);
+            }
+
+            for ($i=0; $i < $member_count; $i++)
+            {
+                FamilyInfo::insert(UUID::v4(), $uuid, $member_relation[$i], $member_full_name[$i], $member_birth_info[$i], $member_address[$i], $member_job_position[$i]);
+            }
+
+            Enrollment::insert(UUID::v4(), $uuid, $course_id);
+
         } else {
             Student::update($student_id, $serial_id, $first_name, $last_name, $fathers_name,
                 $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
