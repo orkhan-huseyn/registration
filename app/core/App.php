@@ -3,9 +3,9 @@
 class App
 {
 
-    protected $controller;
+    protected $controller = 'students';
 
-    protected $action;
+    protected $action = 'register';
 
     protected $routes = array('students' => ['register', 'post', 'course']);
 
@@ -33,11 +33,7 @@ class App
             if (in_array($this->action, $this->routes[$this->controller]))
             {
                 $this->get($this->controller, $this->action);
-            } else {
-                $this->get('pages', 'error');
             }
-        } else {
-            $this->get('pages', 'error');
         }
     }
 

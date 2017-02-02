@@ -265,6 +265,7 @@ $.ajax({
     success: function (data) {
         $('#instructor').html(data.instructor);
         $('#course_description').html(data.description);
+        $('#syllabus').attr('href', data.syllabus);
     }
 });
 
@@ -279,6 +280,7 @@ function post() {
         success: function (data) {
             $('#instructor').html(data.instructor);
             $('#course_description').html(data.description);
+            $('#syllabus').attr('href', data.syllabus);
         }
     });
 }

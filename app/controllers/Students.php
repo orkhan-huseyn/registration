@@ -90,7 +90,7 @@ class Students
 
         $full_name = $instructor->last_name.' '.$instructor->first_name.' '.$instructor->fathers_name;
 
-        $json = array('instructor' => $full_name, 'description' => $course->description);
+        $json = array('instructor' => $full_name, 'description' => $course->description, 'syllabus' => $course->syllabus_path);
 
         echo json_encode($json);
     }
