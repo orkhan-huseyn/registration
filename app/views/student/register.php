@@ -532,7 +532,7 @@
     </div>
     <div class="footer" style="text-align: center">
         <div>
-            <strong>Copyright</strong> ASAN IT &amp; Development Center &copy; 2016
+            <strong>Copyright</strong> &copy; ASAN IT &amp; Təlim Mərkəzi | 2017
         </div>
     </div>
 </div>
