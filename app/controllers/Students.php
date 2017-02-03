@@ -74,9 +74,11 @@ class Students
 
         $uuid = UUID::v4();
 
+        $root_path = "public/img/profile/student/";
+
         if($student_id==0)
         {
-            Student::insert($uuid, $serial_id, 'public/img/profile/student/'.FormHandler::upload('profile_img', '../../cpanel/public/img/profile/student/'), $first_name, $last_name, $fathers_name,
+            Student::insert($uuid, $serial_id, $root_path.FormHandler::upload('profile_img', '../../cpanel/public/img/profile/student/'), $first_name, $last_name, $fathers_name,
                 $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
 
             for($i=0; $i < $education_count; $i++)

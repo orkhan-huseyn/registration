@@ -443,7 +443,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Qohumluq dərəcəsi</label>
                                             <div class="col-sm-6">
-                                                <select name="member_relation[]" class="form-control">
+                                                <select name="member_relation[]" class="form-control required">
                                                     <option value="Ata">Ata</option>
                                                     <option value="Ana">Ana</option>
                                                     <option value="Bacı">Bacı</option>
@@ -460,22 +460,22 @@
 
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Tam adı</label>
-                                            <div class="col-sm-6"><input name="member_full_name[]" class="form-control" type="text"></div>
+                                            <div class="col-sm-6"><input name="member_full_name[]" class="form-control required" type="text"></div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Doğum yeri və tarixi</label>
-                                            <div class="col-sm-6"><input name="member_birth_info[]" class="form-control" type="text"></div>
+                                            <div class="col-sm-6"><input name="member_birth_info[]" class="form-control required" type="text"></div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">İş yeri və vəzifəsi</label>
-                                            <div class="col-sm-6"><input name="member_job_position[]"class="form-control" type="text"></div>
+                                            <div class="col-sm-6"><input name="member_job_position[]"class="form-control required" type="text"></div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Ünvan</label>
-                                            <div class="col-sm-6"><input name="member_address[]" class="form-control" type="text"></div>
+                                            <div class="col-sm-6"><input name="member_address[]" class="form-control required" type="text"></div>
                                         </div>
                                         <br>
                                         <div class="hr-line-dashed"></div>
@@ -516,7 +516,7 @@
                                         <div class="form-group">
                                             <div class="col-sm-4">
                                                 <span class="btn btn-success btn-file">
-                                                    Profil Şəkli Seçin<input onchange="readURL(this)" name="profile_img" class="form-control" type='file' id="imgInp" />
+                                                    Profil Şəkli Seçin <input onchange="readURL(this)" name="profile_img" class="form-control" type='file' id="imgInp" />
                                                 </span>
                                             </div>
                                         </div>
@@ -553,7 +553,7 @@
 <script src="<?php echo URL;?>js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
 <!-- Steps -->
-<script src="<?php echo URL;?>js/plugins/staps/jquery.steps.min.js"></script>
+<script src="<?php echo URL;?>js/plugins/staps/jquery.steps.js"></script>
 
 <!-- Jquery Validate -->
 <script src="<?php echo URL;?>js/plugins/validate/jquery.validate.min.js"></script>
@@ -562,7 +562,6 @@
 
 <script>
     $(document).ready(function(){
-
         $("#wizard").steps();
         $("#form").steps({
             bodyTag: "fieldset",
@@ -572,6 +571,12 @@
                 if (currentIndex > newIndex)
                 {
                     return true;
+                }
+
+                // Forbid suppressing "Warning" step if the user is to young
+                if (newIndex === 3 && Number($("#age").val()) < 18)
+                {
+                    return false;
                 }
 
                 var form = $(this);

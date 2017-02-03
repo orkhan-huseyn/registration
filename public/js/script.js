@@ -221,7 +221,7 @@ function addmember()
         '<div class="form-group">' +
         '<label class="col-sm-3 control-label">Qohumluq dərəcəsi</label>' +
         '<div class="col-sm-6">' +
-        '<select name="member_relation[]" class="form-control">' +
+        '<select name="member_relation[]" class="form-control required">' +
         '<option value="Ata">Ata</option>' +
         '<option value="Ana">Ana</option>' +
         '<option value="Bacı">Bacı</option>' +
@@ -237,19 +237,19 @@ function addmember()
         '</div>' +
         '<div class="form-group">' +
         '<label class="col-sm-3 control-label">Tam adı</label>' +
-        '<div class="col-sm-6"><input name="member_full_name[]" class="form-control" type="text"></div>' +
+        '<div class="col-sm-6"><input name="member_full_name[]" class="form-control required" type="text"></div>' +
         '</div>' +
         '<div class="form-group">' +
         '<label class="col-sm-3 control-label">Doğum yeri və tarixi</label>' +
-        '<div class="col-sm-6"><input name="member_birth_info[]" class="form-control" type="text"></div>' +
+        '<div class="col-sm-6"><input name="member_birth_info[]" class="form-control required" type="text"></div>' +
         '</div>' +
         '<div class="form-group">' +
         '<label class="col-sm-3 control-label">İş yeri və vəzifəsi</label>' +
-        '<div class="col-sm-6"><input name="member_job_position[]" class="form-control" type="text"></div>' +
+        '<div class="col-sm-6"><input name="member_job_position[]" class="form-control required" type="text"></div>' +
         '</div>' +
         '<div class="form-group">' +
         '<label class="col-sm-3 control-label">Ünvan</label>' +
-        '<div class="col-sm-6"><input name="member_address[]" class="form-control" type="text"></div>' +
+        '<div class="col-sm-6"><input name="member_address[]" class="form-control required" type="text"></div>' +
         '</div>' +
         '<br>' +
         '<div class="hr-line-dashed">' +
