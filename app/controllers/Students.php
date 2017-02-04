@@ -75,10 +75,19 @@ class Students
         $uuid = UUID::v4();
 
         $root_path = "public/img/profile/student/";
+        $file_name = "";
 
         if($student_id==0)
         {
-            Student::insert($uuid, $serial_id, $root_path.FormHandler::upload('profile_img', '../../cpanel/public/img/profile/student/'), $first_name, $last_name, $fathers_name,
+            $msg = FormHandler::upload('profile_img', '../../cpanel/public/img/profile/student/');
+
+            if($msg=="empty") {
+                $file_name = "public/img/profile/default.jpg";
+            } else {
+                $file_name = $root_path.$msg;
+            }
+
+            Student::insert($uuid, $serial_id, $file_name, $first_name, $last_name, $fathers_name,
                 $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
 
             for($i=0; $i < $education_count; $i++)
@@ -88,7 +97,10 @@ class Students
 
             for ($i=0; $i < $experience_count; $i++)
             {
-                Experience::insert(UUID::v4(), $uuid, $company[$i], $position[$i], $job_description[$i], $ex_start_month[$i].' '.$ex_start_year[$i], $ex_end_month[$i].' '.$ex_end_year[$i]);
+                if(empty($company[$i])) {}
+                else {
+                    Experience::insert(UUID::v4(), $uuid, $company[$i], $position[$i], $job_description[$i], $ex_start_month[$i].' '.$ex_start_year[$i], $ex_end_month[$i].' '.$ex_end_year[$i]);
+                }
             }
 
             for ($i=0; $i < $lang_count; $i++)
@@ -98,7 +110,10 @@ class Students
 
             for ($i=0; $i < $it_count; $i++)
             {
-                ItKnowledge::insert(UUID::v4(), $uuid, $it[$i], $it_level[$i]);
+                if(empty($it[$i])) {}
+                else {
+                    ItKnowledge::insert(UUID::v4(), $uuid, $it[$i], $it_level[$i]);
+                }
             }
 
             for ($i=0; $i < $member_count; $i++)
