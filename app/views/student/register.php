@@ -385,6 +385,7 @@
                                         <div class="form-group" id="lang_knowledge">
                                             <div class="col-sm-3" style="margin-bottom: 10px;">
                                                 <select name="lang[]" class="form-control">
+                                                    <option value="choose">dil seçin...</option>
                                                     <option value="Rus">Rus</option>
                                                     <option value="Türk">Türk</option>
                                                     <option value="İngilis">İngilis</option>
@@ -562,6 +563,16 @@
 
 <script>
     $(document).ready(function(){
+
+        $('#form').validate({
+            rules: {
+                field: {
+                    required: true,
+                    extension: 'png|jpg|gif'
+                }
+            }
+        });
+
         $("#wizard").steps();
         $("#form").steps({
             bodyTag: "fieldset",
