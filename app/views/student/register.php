@@ -492,7 +492,7 @@
                                         <div class="form-group">
                                             <div class="col-sm-3">
                                                 <img id="img" class="img-circle" src="http://localhost/cpanel/public/img/profile/default.jpg"
-                                                     width="200" height="200" alt="your image" />
+                                                     width="200" height="200" alt="your image" required/>
                                             </div>
                                             <div class="col-sm-5">
                                                 <label>Qeydiyyatdan keçmək istədiyiniz kursu seçin</label>

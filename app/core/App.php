@@ -7,8 +7,6 @@ class App
 
     protected $action = 'register';
 
-    protected $routes = array('students' => ['register', 'post', 'course']);
-
 
     public function __construct()
     {
@@ -28,9 +26,9 @@ class App
             $this->action = 'register';
         }
 
-        if (array_key_exists($this->controller, $this->routes))
+        if (array_key_exists($this->controller, ROUTES))
         {
-            if (in_array($this->action, $this->routes[$this->controller]))
+            if (in_array($this->action, ROUTES[$this->controller]))
             {
                 $this->get($this->controller, $this->action);
             }
@@ -54,16 +52,6 @@ class App
         switch ($controller)
         {
             case 'students':
-
-                require_once '../app/models/Student.php';
-                require_once '../app/models/Course.php';
-                require_once '../app/models/Enrollment.php';
-                require_once '../app/models/Instructor.php';
-                require_once '../app/models/Education.php';
-                require_once '../app/models/Experience.php';
-                require_once '../app/models/FamilyInfo.php';
-                require_once '../app/models/ItKnowledge.php';
-                require_once '../app/models/LangKnowledge.php';
 
                 $controller = new Students();
                 break;
