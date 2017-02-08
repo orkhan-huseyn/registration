@@ -62,7 +62,8 @@
                             <fieldset>
                                 <h2>Şəxsi məlumatlar</h2><br/>
                                 <?php if (isset($_SESSION['error'])) {?>
-                                <div class="alert alert-danger">
+                                <div class="alert alert-danger alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                                     <?php echo $_SESSION['error'];?>
                                 </div>
                                 <?php } ?>

@@ -24,7 +24,7 @@ class Students
     public function post()
     {
 
-        // if ()
+        $_SESSION['error'] = "<strong>Xəta baş verdi!</strong> Qeydiyyat üçün lazımi xanaları doldurduqdan sonra bir daha cəhd edin.";
 
         $student_id          = $_POST['student_id'];
         $serial_id           = $_POST['serial_id'];
