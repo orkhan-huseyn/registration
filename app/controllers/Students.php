@@ -34,7 +34,7 @@ class Students
         {
             $_SESSION['error'] = "<strong>Xəta baş verdi!</strong> &nbsp;Qeydiyyat üçün lazımi xanaları doldurduqdan sonra bir daha cəhd etməyiniz xahiş olunur.";
 
-            header('location: /registration/public/students/register');
+            header('location: /registration/public/');
 
         } else {
             $student_id          = $_POST['student_id'];
@@ -161,22 +161,25 @@ class Students
 
     public function course()
     {
-        $id = "";
-
-        if (isset($_POST['id']))
+        if (!isset($_POST['id']))
         {
+            
+            $_SESSION['error'] = "<strong>Xəta baş verdi!</strong> &nbsp; Xahiş edirik başınız girməyən yerə burnunuzu yerləşdirməyə çalışmayın.";
+            header("location: /registration/public/");
+
+        } else {
             $id =  $_POST['id'];
+
+            $course = Course::find($id);
+
+            $instructor = Instructor::find($course->instructor_id);
+
+            $full_name = $instructor->last_name.' '.$instructor->first_name.' '.$instructor->fathers_name;
+
+            $json = array('instructor' => $full_name, 'description' => $course->description, 'syllabus' => $course->syllabus_path);
+
+            echo json_encode($json);
         }
-
-        $course = Course::find($id);
-
-        $instructor = Instructor::find($course->instructor_id);
-
-        $full_name = $instructor->last_name.' '.$instructor->first_name.' '.$instructor->fathers_name;
-
-        $json = array('instructor' => $full_name, 'description' => $course->description, 'syllabus' => $course->syllabus_path);
-
-        echo json_encode($json);
     }
 
 }

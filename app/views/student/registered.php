@@ -26,10 +26,9 @@
         <div class="ibox">
             <div class="ibox-content">
                 <div class="middle-box text-center animated fadeInRightBig">
-                    <h3 class="font-bold">This is page content</h3>
+                    <h3 class="font-bold">Qeydiyyat uğurla başa çatdı!</h3>
                     <div class="error-desc">
-                        You can create here any grid layout you want. And any variation layout you imagine:) Check out
-                        main dashboard and other site. It use many different layout.
+                        Hörmətli <?php echo $student->last_name.' '.$student->first_name;?>
                         <br/><a href="index.html" class="btn btn-primary m-t">Dashboard</a>
                     </div>
                 </div>
