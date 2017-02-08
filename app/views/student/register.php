@@ -61,6 +61,12 @@
                             <h1>Şəxsi</h1>
                             <fieldset>
                                 <h2>Şəxsi məlumatlar</h2><br/>
+                                <?php if (isset($_SESSION['error'])) {?>
+                                <div class="alert alert-danger">
+                                    <?php echo $_SESSION['error'];?>
+                                </div>
+                                <?php } ?>
+                                <?php unset($_SESSION['error']);?>
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -385,7 +391,7 @@
                                         <div class="form-group" id="lang_knowledge">
                                             <div class="col-sm-3" style="margin-bottom: 10px;">
                                                 <select name="lang[]" class="form-control">
-                                                    <option value="choose">dil seçin...</option>
+                                                    <option value="ch">dil seçin...</option>
                                                     <option value="Rus">Rus</option>
                                                     <option value="Türk">Türk</option>
                                                     <option value="İngilis">İngilis</option>

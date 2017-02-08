@@ -12,8 +12,20 @@ class Students
         require_once '../app/views/student/register.php';
     }
 
+    public function registered()
+    {
+        $title    = "Təbriklər! | Devcenter";
+
+        $student = Student::find(App::parseUrl()[2]);
+
+        require_once '../app/views/student/registered.php';
+    }
+
     public function post()
     {
+
+        // if ()
+
         $student_id          = $_POST['student_id'];
         $serial_id           = $_POST['serial_id'];
         $first_name          = $_POST['first_name'];
@@ -97,21 +109,25 @@ class Students
 
             for ($i=0; $i < $experience_count; $i++)
             {
-                if(empty($company[$i])) {}
-                else {
-                    Experience::insert(UUID::v4(), $uuid, $company[$i], $position[$i], $job_description[$i], $ex_start_month[$i].' '.$ex_start_year[$i], $ex_end_month[$i].' '.$ex_end_year[$i]);
+                if(!empty($company[$i]))
+                {
+                    Experience::insert(UUID::v4(), $uuid, $company[$i], $position[$i], $job_description[$i], 
+                    $ex_start_month[$i].' '.$ex_start_year[$i], $ex_end_month[$i].' '.$ex_end_year[$i]);
                 }
             }
 
             for ($i=0; $i < $lang_count; $i++)
             {
-                LangKnowledge::insert(UUID::v4(), $uuid, $lang[$i], $lang_level[$i]);
+                if ($lang[$i] != "ch")
+                {
+                    LangKnowledge::insert(UUID::v4(), $uuid, $lang[$i], $lang_level[$i]);
+                }
             }
 
             for ($i=0; $i < $it_count; $i++)
             {
-                if(empty($it[$i])) {}
-                else {
+                if(!empty($it[$i]))
+                {
                     ItKnowledge::insert(UUID::v4(), $uuid, $it[$i], $it_level[$i]);
                 }
             }
@@ -128,12 +144,17 @@ class Students
                 $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
         }
 
-        header('location: /cpanel/public/students/index');
+        header('location: /registration/public/students/registered/'.$uuid);
     }
 
     public function course()
     {
-        $id =  $_POST['id'];
+        $id = "";
+
+        if (isset($_POST['id']))
+        {
+            $id =  $_POST['id'];
+        }
 
         $course = Course::find($id);
 
