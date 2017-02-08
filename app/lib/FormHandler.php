@@ -2,10 +2,12 @@
 
 class FormHandler
 {
-    static function validate_input($inputs) {
+    static function validate_input($required_fields) {
 
-        foreach ($inputs as $input) {
-            if (!empty($input)) {
+        foreach ($required_fields as $field) 
+        {
+            if (!empty($_POST[$field]) && isset($_POST[$field])) 
+            {
                 return true;
             }
         }
