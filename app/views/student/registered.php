@@ -25,7 +25,7 @@
     <div class="wrapper wrapper-content">
         <div class="col-sm-6 col-sm-offset-3 ibox" style="position: relative; top: 100px;">
             <div class="ibox-content" style="border-radius: 10px;">
-                <div class="text-center animated fadeInRightBig">
+                <div class="text-center animated fadeIn">
                     <div class="row">
                         <button class="btn btn-primary  dim btn-large-dim" type="button"><i class="fa fa-check"></i></button>
                         <h1>Qeydiyyat uğurla başa çatdı!</h1>
