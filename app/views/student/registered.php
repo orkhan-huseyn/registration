@@ -24,10 +24,10 @@
 <div id="page-wrapper" style="min-height: 700px;">
     <div class="wrapper wrapper-content">
         <div class="col-sm-6 col-sm-offset-3 ibox" style="position: relative; top: 100px;">
-            <div class="ibox-content">
+            <div class="ibox-content" style="border-radius: 10px;">
                 <div class="text-center animated fadeInRightBig">
-                    <button class="btn btn-primary  dim btn-large-dim" type="button"><i class="fa fa-check"></i></button>
                     <div class="row">
+                        <button class="btn btn-primary  dim btn-large-dim" type="button"><i class="fa fa-check"></i></button>
                         <h1>Qeydiyyat uğurla başa çatdı!</h1>
                         <div class="col-sm-10 col-sm-offset-1">
                             <p>Hörmətli Filankəsov Fİlankəs, </p>
