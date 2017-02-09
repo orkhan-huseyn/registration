@@ -2,7 +2,8 @@
 
 class FormHandler
 {
-    static function validate_input($required_fields) {
+    static function validate_input($required_fields) 
+    {
 
         foreach ($required_fields as $field) 
         {

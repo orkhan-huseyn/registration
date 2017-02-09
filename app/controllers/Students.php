@@ -164,7 +164,7 @@ class Students
         if (!isset($_POST['id']))
         {
             
-            $_SESSION['error'] = "<strong>Xəta baş verdi!</strong>  &nbsp;Qeydiyyat üçün lazımi xanaları doldurduqdan sonra bir daha cəhd etməyiniz xahiş olunur.";
+            $_SESSION['error'] = "<strong>Xəta baş verdi!</strong> &nbsp;Qeydiyyat üçün lazımi xanaları doldurduqdan sonra bir daha cəhd etməyiniz xahiş olunur.";
             header("location: /registration/public/");
 
         } else {
