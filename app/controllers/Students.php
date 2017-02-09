@@ -16,8 +16,6 @@ class Students
     {
         $title    = "Təbriklər! | Devcenter";
 
-        $student = Student::find(App::parseUrl()[2]);
-
         require_once '../app/views/student/registered.php';
     }
 

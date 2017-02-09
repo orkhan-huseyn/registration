@@ -21,15 +21,21 @@
 
 <body>
 
-<div id="page-wrapper">
+<div id="page-wrapper" style="min-height: 700px;">
     <div class="wrapper wrapper-content">
-        <div class="ibox">
+        <div class="col-sm-6 col-sm-offset-3 ibox" style="position: relative; top: 100px;">
             <div class="ibox-content">
-                <div class="middle-box text-center animated fadeInRightBig">
-                    <h3 class="font-bold">Qeydiyyat uğurla başa çatdı!</h3>
-                    <div class="error-desc">
-                        Hörmətli <?php echo $student->last_name.' '.$student->first_name;?>
-                        <br/><a href="index.html" class="btn btn-primary m-t">Dashboard</a>
+                <div class="text-center animated fadeInRightBig">
+                    <button class="btn btn-primary  dim btn-large-dim" type="button"><i class="fa fa-check"></i></button>
+                    <div class="row">
+                        <h1>Qeydiyyat uğurla başa çatdı!</h1>
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <p>Hörmətli Filankəsov Fİlankəs, </p>
+                        </div>
+                        <div class="col-sm-3 col-sm-offset-4" style="position: relative; top: 20px;">
+                            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&show_faces=true&share=true&height=80&appId" 
+                            width="500" height="100" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
