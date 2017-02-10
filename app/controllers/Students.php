@@ -14,7 +14,6 @@ class Students
 
     public function registered()
     {
-
         if (isset($_SESSION['registered']) && $_SESSION['registered']==true)
         {
             $title    = "Təbriklər! | Devcenter";
