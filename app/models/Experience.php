@@ -74,6 +74,10 @@ class Experience
 
         $stmt->bindParam(":end_date",      $end_date);
 
-        $stmt->execute();
+        if ($stmt->execute())
+        {
+            return true;
+        }
+        return false;
     }
 }

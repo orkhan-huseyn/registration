@@ -15,6 +15,7 @@ class App
         if(isset($url[0]))
         {
             $this->controller = $url[0];
+            unset($url[0]);
         } else {
             $this->controller = 'students';
         }
@@ -22,6 +23,7 @@ class App
         if (isset($url[1]))
         {
             $this->action = $url[1];
+            unset($url[1]);
         } else {
             $this->action = 'register';
         }
@@ -31,7 +33,11 @@ class App
             if (in_array($this->action, ROUTES[$this->controller]))
             {
                 $this->get($this->controller, $this->action);
+            } else {
+                $this->get('students', 'error');
             }
+        } else {
+            $this->get('students', 'error');
         }
     }
 

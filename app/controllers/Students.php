@@ -14,9 +14,22 @@ class Students
 
     public function registered()
     {
-        $title    = "Təbriklər! | Devcenter";
 
-        require_once '../app/views/student/registered.php';
+        if (isset($_SESSION['registered']) && $_SESSION['registered']==true)
+        {
+            $title    = "Təbriklər! | Devcenter";
+
+            require_once '../app/views/student/registered.php';
+        } else {
+            $this->error();
+        }
+    }
+
+    public function error()
+    {
+        $_SESSION['error'] = "<strong>Xəta baş verdi!</strong> &nbsp;Qeydiyyat üçün lazımi xanaları doldurduqdan sonra bir daha cəhd etməyiniz xahiş olunur.";
+
+        header('location: /registration/public/');
     }
 
     public function post()
@@ -30,9 +43,7 @@ class Students
 
         if (!FormHandler::validate_input($required_fields))
         {
-            $_SESSION['error'] = "<strong>Xəta baş verdi!</strong> &nbsp;Qeydiyyat üçün lazımi xanaları doldurduqdan sonra bir daha cəhd etməyiniz xahiş olunur.";
-
-            header('location: /registration/public/');
+            $this->error();
 
         } else {
             $student_id          = $_POST['student_id'];
@@ -98,6 +109,8 @@ class Students
             $root_path = "public/img/profile/student/";
             $file_name = "";
 
+            $student_ok = $education_ok = $family_ok = $enrollment_ok = false;
+
             if($student_id==0)
             {
                 $msg = FormHandler::upload('profile_img', '../../cpanel/public/img/profile/student/');
@@ -108,12 +121,17 @@ class Students
                     $file_name = $root_path.$msg;
                 }
 
-                Student::insert($uuid, $serial_id, $file_name, $first_name, $last_name, $fathers_name,
-                    $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
+                if (Student::insert($uuid, $serial_id, $file_name, $first_name, $last_name, $fathers_name,$birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook))
+                {
+                    $student_ok = true;
+                }
 
                 for($i=0; $i < $education_count; $i++)
                 {
-                    Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]);
+                    if (Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]))
+                    {
+                        $education_ok = true;
+                    }
                 }
 
                 for ($i=0; $i < $experience_count; $i++)
@@ -143,17 +161,32 @@ class Students
 
                 for ($i=0; $i < $member_count; $i++)
                 {
-                    FamilyInfo::insert(UUID::v4(), $uuid, $member_relation[$i], $member_full_name[$i], $member_birth_info[$i], $member_address[$i], $member_job_position[$i]);
+                    if (FamilyInfo::insert(UUID::v4(), $uuid, $member_relation[$i], $member_full_name[$i], $member_birth_info[$i], $member_address[$i], $member_job_position[$i]))
+                    {
+                        $family_ok = true;
+                    }
                 }
 
-                Enrollment::insert(UUID::v4(), $uuid, $course_id);
+                if (Enrollment::insert(UUID::v4(), $uuid, $course_id))
+                {
+                    $enrollment_ok = true;
+                }
 
             } else {
                 Student::update($student_id, $serial_id, $first_name, $last_name, $fathers_name,
                     $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
             }
 
-            header('location: /registration/public/students/registered/'.$uuid);
+            if ($student_ok && $education_ok && $family_ok && $enrollment_ok)
+            {
+
+                $_SESSION['registered'] = true;
+                $_SESSION['full_name'] = $last_name.' '.$first_name;
+            
+                header('location: /registration/public/students/registered/');
+            } else {
+                $this->error();
+            }
         }
     }
 
@@ -162,8 +195,7 @@ class Students
         if (!isset($_POST['id']))
         {
             
-            $_SESSION['error'] = "<strong>Xəta baş verdi!</strong> &nbsp;Qeydiyyat üçün lazımi xanaları doldurduqdan sonra bir daha cəhd etməyiniz xahiş olunur.";
-            header("location: /registration/public/");
+            $this->error();
 
         } else {
             $id =  $_POST['id'];

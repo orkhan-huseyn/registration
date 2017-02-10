@@ -77,7 +77,11 @@ class FamilyInfo
 
         $stmt->bindParam("job_position", $job_position);
 
-        $stmt->execute();
+        if ($stmt->execute())
+        {
+            return true;
+        }
+        return false;
     }
 
 }

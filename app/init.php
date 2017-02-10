@@ -13,7 +13,7 @@ require_once 'lib/UUID.php';
 define('URL', 'http://localhost/registration/public/');
 
 define('ROUTES', [
-    'students' => ['register', 'post', 'course', 'registered']
+    'students' => ['register', 'post', 'course', 'registered', 'error']
 ]);
 
 spl_autoload_register(function($class)

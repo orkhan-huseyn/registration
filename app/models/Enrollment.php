@@ -43,6 +43,10 @@ class Enrollment
 
         $stmt->bindParam(":cr_id", $course_id);
 
-        $stmt->execute();
+        if ($stmt->execute())
+        {
+            return true;
+        }
+        return false;
     }
 }

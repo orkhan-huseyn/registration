@@ -161,7 +161,11 @@ class Student
 
         $stmt->bindParam(":facebook",     $facebook);
 
-        $stmt->execute();
+        if ($stmt->execute())
+        {
+            return true;
+        }
+        return false;
     }
 
     public static function update($student_id, $serial_id, $first_name, $last_name, $fathers_name, $birth_date,

@@ -57,7 +57,11 @@ class LangKnowledge
 
         $stmt->bindParam(":knowledge_level", $knowledge_level);
 
-        $stmt->execute();
+        if ($stmt->execute())
+        {
+            return true;
+        }
+        return false;
     }
 
 }
