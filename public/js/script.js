@@ -1,15 +1,12 @@
-
 var edu = 2;
 
-function deled(num)
-{
-    $('#edu'+num).remove();
+function deled(num) {
+    $('#edu' + num).remove();
     edu--;
 }
 
-function addEducation()
-{
-    $('#education_info').append('<div id="edu'+edu+'"><div class="form-group"><button onclick="deled(' + edu +')" class="btn btn-danger btn-circle pull-right">' +
+function addEducation() {
+    $('#education_info').append('<div id="edu' + edu + '"><div class="form-group"><button onclick="deled(' + edu + ')" class="btn btn-danger btn-circle pull-right">' +
         '<i class="fa fa-times"></i>' +
         '</button>' +
         '</div><div class="form-group">' +
@@ -86,16 +83,14 @@ function addEducation()
 
 var job = 2;
 
-function deljob(num)
-{
-    $('#job'+num).remove();
+function deljob(num) {
+    $('#job' + num).remove();
     job--;
 }
 
-function addjob()
-{
-    $('#experience').append('<div id="job'+job+'">' +
-        '<div class="form-group"><button onclick="deljob('+job+')" class="pull-right btn btn-danger btn-circle">' +
+function addjob() {
+    $('#experience').append('<div id="job' + job + '">' +
+        '<div class="form-group"><button onclick="deljob(' + job + ')" class="pull-right btn btn-danger btn-circle">' +
         '<i class="fa fa-times"></i></button>' +
         '</div>' +
         '<div class="form-group">' +
@@ -182,15 +177,13 @@ function addjob()
 
 var it = 2;
 
-function delit(num)
-{
-    $('#it'+num).remove();
+function delit(num) {
+    $('#it' + num).remove();
     it--;
 }
 
-function addItKnowldge()
-{
-    $('#it_knowledge').append('<div id="it'+it+'"><div style="margin-bottom: 10px;" class="col-sm-3">' +
+function addItKnowldge() {
+    $('#it_knowledge').append('<div id="it' + it + '"><div style="margin-bottom: 10px;" class="col-sm-3">' +
         '<input type="text" class="form-control" name="it[]">' +
         '</div>' +
         '<div style="margin-bottom: 10px;" class="col-sm-8">' +
@@ -199,7 +192,7 @@ function addItKnowldge()
         '<option value="Orta">Orta</option>' +
         '<option value="Əla">Əla</option>' +
         '</select>' +
-        '</div><div class="col-sm-1"><button onclick="delit('+it+')" class="btn btn-danger btn-circle">' +
+        '</div><div class="col-sm-1"><button onclick="delit(' + it + ')" class="btn btn-danger btn-circle">' +
         '<i class="fa fa-times"></i></button>' +
         '</div></div>');
     it++;
@@ -207,16 +200,14 @@ function addItKnowldge()
 
 var member = 2;
 
-function delmember(num)
-{
-    $('#family'+num).remove();
+function delmember(num) {
+    $('#family' + num).remove();
     member--;
 }
 
-function addmember()
-{
-    $('#family_tab').append('<div id="family'+member+'">' +
-        '<div class="form-group"><button onclick="delmember('+member+')" class="pull-right btn btn-danger btn-circle">' +
+function addmember() {
+    $('#family_tab').append('<div id="family' + member + '">' +
+        '<div class="form-group"><button onclick="delmember(' + member + ')" class="pull-right btn btn-danger btn-circle">' +
         '<i class="fa fa-times"></i></button></div>' +
         '<div class="form-group">' +
         '<label class="col-sm-3 control-label">Qohumluq dərəcəsi</label>' +
@@ -240,16 +231,8 @@ function addmember()
         '<div class="col-sm-6"><input name="member_full_name[]" class="form-control required" type="text"></div>' +
         '</div>' +
         '<div class="form-group">' +
-        '<label class="col-sm-3 control-label">Doğum yeri və tarixi</label>' +
-        '<div class="col-sm-6"><input name="member_birth_info[]" class="form-control required" type="text"></div>' +
-        '</div>' +
-        '<div class="form-group">' +
-        '<label class="col-sm-3 control-label">İş yeri və vəzifəsi</label>' +
-        '<div class="col-sm-6"><input name="member_job_position[]" class="form-control required" type="text"></div>' +
-        '</div>' +
-        '<div class="form-group">' +
-        '<label class="col-sm-3 control-label">Ünvan</label>' +
-        '<div class="col-sm-6"><input name="member_address[]" class="form-control required" type="text"></div>' +
+        '<label class="col-sm-3 control-label">Əlaqə telefonu</label>' +
+        '<div class="col-sm-6"><input name="member_phone_number[]" class="form-control required" type="text"></div>' +
         '</div>' +
         '<br>' +
         '<div class="hr-line-dashed">' +
@@ -259,15 +242,13 @@ function addmember()
 
 var lang = 2;
 
-function dellang(num)
-{
-    $('#lang'+num).remove();
+function dellang(num) {
+    $('#lang' + num).remove();
     lang--;
 }
 
-function addLang()
-{
-    $('#lang_knowledge').append('<div id="lang'+lang+'"><div class="col-sm-3">' +
+function addLang() {
+    $('#lang_knowledge').append('<div id="lang' + lang + '"><div class="col-sm-3">' +
         '<select name="lang[]" class="form-control" style="margin-bottom: 10px;">' +
         '<option value="Rus">Rus</option>' +
         '<option value="Türk">Türk</option>' +
@@ -285,62 +266,26 @@ function addLang()
         '<option value="Əla">Əla</option>' +
         '</select>' +
         '</div>' +
-        '<div class="col-sm-1"><button onclick="dellang('+lang+')" class="btn btn-danger btn-circle">' +
+        '<div class="col-sm-1"><button onclick="dellang(' + lang + ')" class="btn btn-danger btn-circle">' +
         '<i class="fa fa-times"></i></button>' +
         '</div></div>');
     lang++;
 }
 
-function readURL(input)
-{
-    if (input.files && input.files[0])
-    {
+function readURL(input) {
+    if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e)
-        {
+        reader.onload = function(e) {
             $('#img').attr('src', e.target.result);
         }
         reader.readAsDataURL(input.files[0]);
     }
 }
 
-for(var i=1;i<=31;i++)
-{
-    $('#birth_day').append('<option value="'+i+'">'+i+'</option>');
+for (var i = 1; i <= 31; i++) {
+    $('#birth_day').append('<option value="' + i + '">' + i + '</option>');
 }
 
-for(var i=1980;i<=2010;i++)
-{
-    $('#birth_year').append('<option value="'+i+'">'+i+'</option>');
-}
-
-
-var id = $('#courses').find(':selected').val();
-
-$.ajax({
-    type: 'post',
-    url: '/registration/public/students/course',
-    data: {'id': id},
-    dataType: 'json',
-    success: function (data) {
-        $('#instructor').html(data.instructor);
-        $('#course_description').html(data.description);
-        $('#syllabus').attr('href', data.syllabus);
-    }
-});
-
-function post() {
-    var id = $('#courses').find(':selected').val();
-
-    $.ajax({
-        type: 'post',
-        url: '/registration/public/students/course',
-        data: {'id': id},
-        dataType: 'json',
-        success: function (data) {
-            $('#instructor').html(data.instructor);
-            $('#course_description').html(data.description);
-            $('#syllabus').attr('href', data.syllabus);
-        }
-    });
+for (var i = 1980; i <= 2010; i++) {
+    $('#birth_year').append('<option value="' + i + '">' + i + '</option>');
 }

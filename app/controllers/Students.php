@@ -95,20 +95,18 @@ class Students
 
             $member_relation     = $_POST['member_relation'];
             $member_full_name    = $_POST['member_full_name'];
-            $member_birth_info   = $_POST['member_birth_info'];
-            $member_job_position = $_POST['member_job_position'];
-            $member_address      = $_POST['member_address'];
+            $member_phone_number   = $_POST['member_phone_number'];
 
-            $member_count = count($member_address);
+            $member_count = count($member_relation);
 
-            $course_id = $_POST['course'];
+            $direction = $_POST["direction"];
 
             $uuid = UUID::v4();
 
             $root_path = "public/img/profile/student/";
             $file_name = "";
 
-            $student_ok = $education_ok = $family_ok = $enrollment_ok = false;
+            $student_ok = $education_ok = $family_ok = false;
 
             if($student_id==0)
             {
@@ -120,7 +118,8 @@ class Students
                     $file_name = $root_path.$msg;
                 }
 
-                if (Student::insert($uuid, $serial_id, $file_name, $first_name, $last_name, $fathers_name,$birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook))
+                if (Student::insert($uuid, $serial_id, $file_name, $first_name, $last_name, $fathers_name,$birth_date,
+                    $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook, $direction))
                 {
                     $student_ok = true;
                 }
@@ -166,17 +165,12 @@ class Students
                     }
                 }
 
-                if (Enrollment::insert(UUID::v4(), $uuid, $course_id))
-                {
-                    $enrollment_ok = true;
-                }
-
             } else {
                 Student::update($student_id, $serial_id, $first_name, $last_name, $fathers_name,
                     $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
             }
 
-            if ($student_ok && $education_ok && $family_ok && $enrollment_ok)
+            if ($student_ok && $education_ok && $family_ok)
             {
 
                 $_SESSION['registered'] = true;
@@ -186,28 +180,6 @@ class Students
             } else {
                 $this->error();
             }
-        }
-    }
-
-    public function course()
-    {
-        if (!isset($_POST['id']))
-        {
-            
-            $this->error();
-
-        } else {
-            $id =  $_POST['id'];
-
-            $course = Course::find($id);
-
-            $instructor = Instructor::find($course->instructor_id);
-
-            $full_name = $instructor->last_name.' '.$instructor->first_name.' '.$instructor->fathers_name;
-
-            $json = array('instructor' => $full_name, 'description' => $course->description, 'syllabus' => $course->syllabus_path);
-
-            echo json_encode($json);
         }
     }
 

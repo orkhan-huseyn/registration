@@ -472,18 +472,8 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Doğum yeri və tarixi</label>
-                                            <div class="col-sm-6"><input name="member_birth_info[]" class="form-control required" type="text"></div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">İş yeri və vəzifəsi</label>
-                                            <div class="col-sm-6"><input name="member_job_position[]"class="form-control required" type="text"></div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Ünvan</label>
-                                            <div class="col-sm-6"><input name="member_address[]" class="form-control required" type="text"></div>
+                                            <label class="col-sm-3 control-label">Əlaqə telefonu</label>
+                                            <div class="col-sm-6"><input name="member_phone_number[]" class="form-control required" type="text"></div>
                                         </div>
                                         <br>
                                         <div class="hr-line-dashed"></div>
@@ -498,31 +488,27 @@
                                     <div class="form-horizontal">
                                         <div class="form-group">
                                             <div class="col-sm-3">
-                                                <img id="img" class="img-circle" src="http://localhost/cpanel/public/img/profile/default.jpg"
-                                                     width="200" height="200" alt="your image"/>
+                                                <img id="img" class="img-circle" 
+                                                src="http://localhost/cpanel/public/img/profile/default.jpg" width="200" height="200" alt="your image"/>
                                             </div>
                                             <div class="col-sm-5">
-                                                <label>Qeydiyyatdan keçmək istədiyiniz kursu seçin</label>
-                                                <select id="courses" onchange="post()" name="course" class="form-control">
-                                                    <?php foreach ($courses as $course) { ?>
-                                                        <option class="opt" value="<?php echo $course->course_id;?>"><?php echo $course->course_name;?></option>
-                                                    <?php } ?>
+                                                <label>Maraqlandığınız istiqaməti seçin</label>
+                                                <select name="direction" class="form-control">
+                                                    <option value="Java Developer">Java (SE/EE) Development</option>
+                                                    <option value="SQL Developer">SQL Development</option>
+                                                    <option value="Database Administrator">Database Administration</option>
+                                                    <option value="Network Administration">Network Administration</option>
+                                                    <option value="Web Developer Back-end (PHP)">Back-end Web Development (PHP)</option>
+                                                    <option value="Front-end Web Developer (HTML/CSS/JS)">Front-end Web Development (HTML/CSS/JS)</option>
+                                                    <option value="Graphic Design">Graphic(Web/UI) Design</option>
                                                 </select><br/>
-                                                <div id="course_info">
-                                                    <strong>Tədrisçi: </strong>
-                                                    <p id="instructor">
-
-                                                    </p>
-                                                    <strong>Təlim haqqında məlumat: </strong>
-                                                    <p id="course_description">
-
-                                                    </p>
-                                                    <a id="syllabus" href="#" target="_blank">Təlim Planı</a>
+                                                <div id="robot_test">
+                                                    <!--google robot test-->
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-4" style="position: relative; left: 30px;">
                                                 <span class="btn btn-success btn-file">
                                                     Profil Şəkli Seçin <input onchange="readURL(this)" name="profile_img" class="form-control" type='file' id="imgInp" />
                                                 </span>

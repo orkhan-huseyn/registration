@@ -12,13 +12,10 @@ class FamilyInfo
 
     public $full_name;
 
-    public $birth_info;
+    public $phone_number;
 
-    public $address;
 
-    public $job_position;
-
-    public function __construct($info_id, $student_id, $relation, $full_name, $birth_info, $address, $job_position)
+    public function __construct($info_id, $student_id, $relation, $full_name, $phone_number)
     {
 
         $this->info_id      = $info_id;
@@ -29,11 +26,7 @@ class FamilyInfo
 
         $this->full_name    = $full_name;
 
-        $this->birth_info   = $birth_info;
-
-        $this->address      = $address;
-
-        $this->job_position = $job_position;
+        $this->phone_number = $phone_number;
 
     }
 
@@ -50,32 +43,28 @@ class FamilyInfo
         foreach ($stmt->fetchAll() as $family_info)
         {
             $list[] = new FamilyInfo($family_info['info_id'], $family_info['student_id'], $family_info['relation'],
-                $family_info['full_name'], $family_info['birth_info'], $family_info['address'], $family_info['job_position']);
+                $family_info['full_name'], $family_info['phone_number']);
         }
 
         return $list;
     }
 
-    public static function insert($info_id, $student_id, $relation, $full_name, $birth_info, $address, $job_position)
+    public static function insert($info_id, $student_id, $relation, $full_name, $phone_number)
     {
         $conn = Database::getInstance();
 
-        $stmt = $conn->prepare("INSERT INTO family_info (info_id, student_id, relation, full_name, birth_info, address, job_position) "
-            ."VALUES (:info_id, :student_id, :relation, :full_name, :birth_info, :address, :job_position)");
+        $stmt = $conn->prepare("INSERT INTO family_info (info_id, student_id, relation, full_name, phone_number) "
+            ."VALUES (:info_id, :student_id, :relation, :full_name, :phone_number)");
 
-        $stmt->bindParam(":info_id",     $info_id);
+        $stmt->bindParam(":info_id",       $info_id);
 
-        $stmt->bindParam(":student_id",  $student_id);
+        $stmt->bindParam(":student_id",    $student_id);
 
-        $stmt->bindParam(":relation",    $relation);
+        $stmt->bindParam(":relation",      $relation);
 
-        $stmt->bindParam(":full_name",   $full_name);
+        $stmt->bindParam(":full_name",     $full_name);
 
-        $stmt->bindParam(":birth_info",  $birth_info);
-
-        $stmt->bindParam(":address",     $address);
-
-        $stmt->bindParam("job_position", $job_position);
+        $stmt->bindParam(":phone_number",  $phone_number);
 
         if ($stmt->execute())
         {

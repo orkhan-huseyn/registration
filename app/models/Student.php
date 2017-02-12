@@ -42,10 +42,12 @@ class Student
 
     public $comments;
 
+    public $direction;
+
 
     public function __construct($student_id, $serial_id,  $image_path, $first_name, $last_name, $fathers_name, $birth_date,
                                 $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook,
-                                $reg_date, $status, $comments) {
+                                $reg_date, $status, $comments, $direction) {
 
         $this->student_id          = $student_id;
 
@@ -85,6 +87,8 @@ class Student
 
         $this->comments            = $comments;
 
+        $this->direction           = $direction;
+
     }
 
     public static function all()
@@ -99,7 +103,7 @@ class Student
         {
             $list[] = new Student($student['student_id'], $student['serial_id'], $student['image_path'], $student['first_name'], $student['last_name'], $student['fathers_name'],
                 $student['birth_date'], $student['birth_place'], $student['gender'], $student['married'], $student['about'], $student['phone_mobile'], $student['phone_home'], $student['address'], $student['email'],
-                $student['facebook'], $student['reg_date'], $student['status'], $student['comments']);
+                $student['facebook'], $student['reg_date'], $student['status'], $student['comments'], $student['direction']);
         }
         return $list;
     }
@@ -116,18 +120,18 @@ class Student
 
         return new Student($student['student_id'], $student['serial_id'], $student['image_path'], $student['first_name'], $student['last_name'], $student['fathers_name'],
             $student['birth_date'], $student['birth_place'], $student['gender'], $student['married'], $student['about'], $student['phone_mobile'], $student['phone_home'], $student['address'], $student['email'],
-            $student['facebook'], $student['reg_date'], $student['status'], $student['comments']);
+            $student['facebook'], $student['reg_date'], $student['status'], $student['comments'], $student['direction']);
     }
 
     public static function insert($student_id, $serial_id,  $image_path, $first_name, $last_name, $fathers_name, $birth_date,
-                                  $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook)
+                                  $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook, $direction)
     {
         $conn = Database::getInstance();
 
         $stmt = $conn->prepare("INSERT INTO students (student_id, serial_id, image_path, first_name, last_name, fathers_name, birth_date, 
-        birth_place, gender, married, about, phone_mobile, phone_home, address, email, facebook)"
+        birth_place, gender, married, about, phone_mobile, phone_home, address, email, facebook, direction)"
             ." VALUES (:student_id, :serial_id, :image_path, :first_name, :last_name, :fathers_name, :birth_date, :birth_place, :gender, :married,
-        :about, :phone_mobile, :phone_home, :address, :email, :facebook)");
+        :about, :phone_mobile, :phone_home, :address, :email, :facebook, :direction)");
 
         $stmt->bindParam(":student_id",   $student_id);
 
@@ -160,6 +164,8 @@ class Student
         $stmt->bindParam(":email",        $email);
 
         $stmt->bindParam(":facebook",     $facebook);
+
+        $stmt->bindParam(":direction",    $direction);
 
         if ($stmt->execute())
         {
