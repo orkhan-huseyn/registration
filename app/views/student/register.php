@@ -72,7 +72,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Ş/V no *</label>
-                                            <input id="serial" name="serial_id" type="text" class="form-control required">
+                                            <input id="serial" name="serial_id" type="text" class="form-control required" data-mask="AZE9999999">
                                             <input type="hidden" name="student_id" value="0"/>
                                         </div>
                                         <div class="form-group">
@@ -142,11 +142,11 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Mobil Telefon *</label>
-                                            <input name="phone_mobile" class="form-control required">
+                                            <input name="phone_mobile" class="form-control required" data-mask="(999) 999-99-99">
                                         </div>
                                         <div class="form-group">
                                             <label>Ev Telefonu *</label>
-                                            <input name="phone_home" class="form-control required">
+                                            <input name="phone_home" class="form-control required" data-mask="(999) 999-99-99">
                                         </div>
                                         <div class="form-group">
                                             <label>E-poçt *</label>

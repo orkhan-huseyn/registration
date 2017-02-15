@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a865a49-6819-4e8d-bc71-d59a30199171" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/student/register.php" afterPath="$PROJECT_DIR$/app/views/student/register.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,27 +18,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/student/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8585">
-              <caret line="505" column="76" lean-forward="false" selection-start-line="505" selection-start-column="76" selection-end-line="505" selection-end-column="76" />
+            <state relative-caret-position="136">
+              <caret line="74" column="143" lean-forward="false" selection-start-line="74" selection-start-column="143" selection-end-line="74" selection-end-column="143" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3910">
-              <caret line="230" column="105" lean-forward="false" selection-start-line="230" selection-start-column="105" selection-end-line="230" selection-end-column="105" />
-              <folding>
-                <marker date="1486919814460" expanded="true" signature="9042:9062" ph="..." />
-                <marker date="1486919814460" expanded="true" signature="9190:9210" ph="..." />
-                <marker date="1486919814460" expanded="true" signature="11616:11636" ph="..." />
-                <marker date="1486919814460" expanded="true" signature="12062:12082" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -54,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FamilyInfo.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FamilyInfo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/FamilyInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="-73">
+              <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
               <folding>
                 <marker date="1486918199000" expanded="true" signature="619:667" ph="SELECT * fro... family_info" />
                 <marker date="1486918199000" expanded="true" signature="1192:1357" ph="INSERT INTO family_info... " />
@@ -117,9 +103,9 @@
         <option value="$PROJECT_DIR$/public/js/plugins/staps/jquery.steps.js" />
         <option value="$PROJECT_DIR$/app/lib/FormHandler.php" />
         <option value="$PROJECT_DIR$/public/js/script.js" />
-        <option value="$PROJECT_DIR$/app/views/student/register.php" />
         <option value="$PROJECT_DIR$/app/models/Student.php" />
         <option value="$PROJECT_DIR$/app/controllers/Students.php" />
+        <option value="$PROJECT_DIR$/app/views/student/register.php" />
       </list>
     </option>
   </component>
@@ -151,7 +137,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -318,7 +304,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,7 +401,8 @@
       <workItem from="1486921498193" duration="202000" />
       <workItem from="1486921756505" duration="16000" />
       <workItem from="1486921885407" duration="41000" />
-      <workItem from="1486964105965" duration="2000" />
+      <workItem from="1486964105965" duration="24000" />
+      <workItem from="1487196349004" duration="264000" />
     </task>
     <task id="LOCAL-00001" summary="c&#10;">
       <created>1485961599528</created>
@@ -508,17 +495,24 @@
       <option name="project" value="LOCAL" />
       <updated>1486921699214</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="updated student and family info model">
+      <created>1486964112132</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1486964112132</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37467000" />
+    <option name="totallyTimeSpent" value="37753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18081991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18081991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -851,7 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -935,27 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3910">
-          <caret line="230" column="105" lean-forward="false" selection-start-line="230" selection-start-column="105" selection-end-line="230" selection-end-column="105" />
-          <folding>
-            <marker date="1486919814460" expanded="true" signature="9042:9062" ph="..." />
-            <marker date="1486919814460" expanded="true" signature="9190:9210" ph="..." />
-            <marker date="1486919814460" expanded="true" signature="11616:11636" ph="..." />
-            <marker date="1486919814460" expanded="true" signature="12062:12082" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/student/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8585">
-          <caret line="505" column="76" lean-forward="false" selection-start-line="505" selection-start-column="76" selection-end-line="505" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Students.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2771">
@@ -968,8 +940,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/FamilyInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+        <state relative-caret-position="-73">
+          <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
           <folding>
             <marker date="1486918199000" expanded="true" signature="619:667" ph="SELECT * fro... family_info" />
             <marker date="1486918199000" expanded="true" signature="1192:1357" ph="INSERT INTO family_info... " />
@@ -991,6 +963,27 @@
             <marker date="1486920309904" expanded="true" signature="7388:7436" ph="UPDATE stude... " />
             <marker date="1486920309904" expanded="true" signature="7613:7661" ph="UPDATE stude... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="230" column="105" lean-forward="false" selection-start-line="230" selection-start-column="105" selection-end-line="230" selection-end-column="105" />
+          <folding>
+            <marker date="1486919814460" expanded="true" signature="9042:9062" ph="..." />
+            <marker date="1486919814460" expanded="true" signature="9190:9210" ph="..." />
+            <marker date="1486919814460" expanded="true" signature="11616:11636" ph="..." />
+            <marker date="1486919814460" expanded="true" signature="12062:12082" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/student/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="74" column="143" lean-forward="false" selection-start-line="74" selection-start-column="143" selection-end-line="74" selection-end-column="143" />
+          <folding />
         </state>
       </provider>
     </entry>
