@@ -8,14 +8,14 @@
 
     <title><?php echo $title;?></title>
 
-    <link href="<?php echo URL;?>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo URL;?>font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="<?php echo URL;?>css/plugins/iCheck/custom.css" rel="stylesheet">
-    <link href="<?php echo URL;?>css/plugins/steps/jquery.steps.css" rel="stylesheet">
-    <link href="<?php echo URL;?>css/animate.css" rel="stylesheet">
-    <link href="<?php echo URL;?>css/style.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>css/plugins/steps/jquery.steps.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>css/animate.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>css/style.css" rel="stylesheet">
 
-    <link rel="icon" href="<?php echo URL;?>img/icons/favicon.ico">
+    <link rel="icon" href="<?php echo BASE_DIR;?>img/icons/favicon.ico">
 
 </head>
 
@@ -28,7 +28,7 @@
                 <div class="text-center animated fadeIn">
                     <div class="row">
                         <button class="btn btn-primary  dim btn-large-dim" type="button"><i class="fa fa-check"></i></button>
-                        <h1>Qeydiyyat uğurla başa çatdı!</h1>
+                        <h1>Qeydiyyat uğBASE_DIRa başa çatdı!</h1>
                         <div class="col-sm-10 col-sm-offset-1">
                             <p>Hörmətli <?php if (isset($_SESSION['full_name'])) { echo $_SESSION['full_name']; } ?>, sorğunuz qeydə alındı. 
                             Məlumatlarınız yoxlanıldıqdan sonra sizinlər əlaqə saxlanılacaq. 
@@ -57,17 +57,17 @@
 
 
 <!-- Mainly scriptss -->
-<script src="<?php echo URL;?>js/jquery-3.1.1.min.js"></script>
-<script src="<?php echo URL;?>js/bootstrap.min.js"></script>
-<script src="<?php echo URL;?>js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="<?php echo URL;?>js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/jquery-3.1.1.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/bootstrap.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="<?php echo BASE_DIR;?>js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="<?php echo URL;?>js/inspinia.js"></script>
-<script src="<?php echo URL;?>js/plugins/pace/pace.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/inspinia.js"></script>
+<script src="<?php echo BASE_DIR;?>js/plugins/pace/pace.min.js"></script>
 
 <!-- Input Mask-->
-<script src="<?php echo URL;?>js/plugins/jasny/jasny-bootstrap.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
 </body>
 
