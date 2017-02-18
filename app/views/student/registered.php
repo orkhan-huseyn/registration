@@ -28,9 +28,9 @@
                 <div class="text-center animated fadeIn">
                     <div class="row">
                         <button class="btn btn-primary  dim btn-large-dim" type="button"><i class="fa fa-check"></i></button>
-                        <h1>Qeydiyyat uğBASE_DIRa başa çatdı!</h1>
+                        <h1>Qeydiyyat uğurla başa çatdı!</h1>
                         <div class="col-sm-10 col-sm-offset-1">
-                            <p>Hörmətli <?php if (isset($_SESSION['full_name'])) { echo $_SESSION['full_name']; } ?>, sorğunuz qeydə alındı. 
+                            <p>Hörmətli <?php if (isset($_SESSION['student_full_name'])) { echo $_SESSION['full_name']; } ?>, sorğunuz qeydə alındı.
                             Məlumatlarınız yoxlanıldıqdan sonra sizinlər əlaqə saxlanılacaq. 
                             Bizi seçdiyiniz üçün təşəkkürlər! </p>
                         </div>
@@ -39,7 +39,7 @@
                             width="500" height="100" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                         </div>
                         <?php 
-                            unset($_SESSION['full_name']);
+                            unset($_SESSION['student_full_name']);
                             unset($_SESSION['registered']);
                         ?>
                     </div>

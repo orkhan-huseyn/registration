@@ -172,7 +172,7 @@ class Students
             {
 
                 $_SESSION['registered'] = true;
-                $_SESSION['full_name'] = $last_name.' '.$first_name;
+                $_SESSION['student_full_name'] = $last_name.' '.$first_name;
             
                 header('location: '.BASE_DIR.'students/registered/');
             } else {
