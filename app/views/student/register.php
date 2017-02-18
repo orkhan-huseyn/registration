@@ -8,14 +8,14 @@
 
     <title>Qeydiyyat | Devcenter</title>
 
-    <link href="<?php echo URL;?>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo URL;?>font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="<?php echo URL;?>css/plugins/iCheck/custom.css" rel="stylesheet">
-    <link href="<?php echo URL;?>css/plugins/steps/jquery.steps.css" rel="stylesheet">
-    <link href="<?php echo URL;?>css/animate.css" rel="stylesheet">
-    <link href="<?php echo URL;?>css/style.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>css/plugins/steps/jquery.steps.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>css/animate.css" rel="stylesheet">
+    <link href="<?php echo BASE_DIR;?>css/style.css" rel="stylesheet">
 
-    <link rel="icon" href="<?php echo URL;?>img/icons/favicon.ico">
+    <link rel="icon" href="<?php echo BASE_DIR;?>img/icons/favicon.ico">
 
     <style>
 
@@ -57,7 +57,7 @@
                             Tələbə Qeydiyyat Formu
                         </h2>
                         <br/>
-                        <form id="form" method="post" action="/registration/public/students/post" enctype="multipart/form-data" class="wizard-big">
+                        <form id="form" method="post" action="<?php echo BASE_DIR?>students/post" enctype="multipart/form-data" class="wizard-big">
                             <h1>Şəxsi</h1>
                             <fieldset>
                                 <h2>Şəxsi məlumatlar</h2><br/>
@@ -473,7 +473,7 @@
 
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Əlaqə telefonu</label>
-                                            <div class="col-sm-6"><input name="member_phone_number[]" class="form-control required" type="text"></div>
+                                            <div class="col-sm-6"><input name="member_phone_number[]" class="form-control required" type="text" data-mask="(999) 999-99-99"></div>
                                         </div>
                                         <br>
                                         <div class="hr-line-dashed"></div>
@@ -500,9 +500,6 @@
                                                     <option value="Java development">Java Developement</option>
                                                     <option value="Database Administration">Database Administration</option>
                                                     <option value="Photography & Retouch">Fotoqrafiya & Retouch</option>
-
-
-
                                                 </select><br/>
                                                 <div id="robot_test">
                                                     <!--google robot test-->
@@ -533,10 +530,8 @@
     </div>
 </div>
 
-
-
 <!-- Mainly scriptss -->
-<script src="<?php echo URL;?>js/jquery-3.1.1.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/jquery-3.1.1.min.js"></script>
 <script src="<?php echo URL;?>js/bootstrap.min.js"></script>
 <script src="<?php echo URL;?>js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="<?php echo URL;?>js/plugins/slimscroll/jquery.slimscroll.min.js"></script>

@@ -232,7 +232,7 @@ function addmember() {
         '</div>' +
         '<div class="form-group">' +
         '<label class="col-sm-3 control-label">Əlaqə telefonu</label>' +
-        '<div class="col-sm-6"><input name="member_phone_number[]" class="form-control required" type="text"></div>' +
+        '<div class="col-sm-6"><input name="member_phone_number[]" class="form-control required" type="text" data-mask="(999) 999-99-99"></div>' +
         '</div>' +
         '<br>' +
         '<div class="hr-line-dashed">' +

@@ -26,14 +26,14 @@ class Students
     {
         $_SESSION['error'] = "<strong>Xəta baş verdi!</strong> &nbsp;Qeydiyyat üçün lazımi xanaları doldurduqdan sonra bir daha cəhd etməyiniz xahiş olunur.";
 
-        header('location: /registration/public/');
+        header('location: '.BASE_DIR);
     }
 
     public function post()
     {
 
         $required_fields = [
-            "student_id", "serial_id", "fisrt_name", "last_name", "fathers_name", "birth_day",
+            "student_id", "serial_id", "first_name", "last_name", "fathers_name", "birth_day",
             "birth_month", "birth_year", "birth_place", "gender", "married", "phone_mobile", "phone_home", 
             "address", "email", "facebook", "about"
             ];
@@ -101,7 +101,7 @@ class Students
 
             $uuid = UUID::v4();
 
-            $root_path = "public/img/profile/student/";
+            $root_path = "img/profile/student/";
             $file_name = "";
 
             $student_ok = $education_ok = $family_ok = false;
@@ -111,7 +111,7 @@ class Students
                 $msg = FormHandler::upload('profile_img', '../../cpanel/public/img/profile/student/');
 
                 if($msg=="empty") {
-                    $file_name = "public/img/profile/default.jpg";
+                    $file_name = "img/profile/default.jpg";
                 } else {
                     $file_name = $root_path.$msg;
                 }
@@ -157,7 +157,7 @@ class Students
 
                 for ($i=0; $i < $member_count; $i++)
                 {
-                    if (FamilyInfo::insert(UUID::v4(), $uuid, $member_relation[$i], $member_full_name[$i], $member_birth_info[$i], $member_address[$i], $member_job_position[$i]))
+                    if (FamilyInfo::insert(UUID::v4(), $uuid, $member_relation[$i], $member_full_name[$i], $member_phone_number[$i]))
                     {
                         $family_ok = true;
                     }
@@ -174,7 +174,7 @@ class Students
                 $_SESSION['registered'] = true;
                 $_SESSION['full_name'] = $last_name.' '.$first_name;
             
-                header('location: /registration/public/students/registered/');
+                header('location: '.BASE_DIR.'students/registered/');
             } else {
                 $this->error();
             }

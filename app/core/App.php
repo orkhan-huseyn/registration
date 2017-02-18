@@ -1,12 +1,11 @@
 <?php
 
+
 class App
 {
+    protected $controller;
 
-    protected $controller = 'students';
-
-    protected $action = 'register';
-
+    protected $action;
 
     public function __construct()
     {
@@ -25,22 +24,23 @@ class App
             $this->action = $url[1];
             unset($url[1]);
         } else {
-            $this->action = 'register';
+            $this->action = 'index';
         }
+
+        $params = $url ? array_values($url) : [];
 
         if (array_key_exists($this->controller, Router::$routes))
         {
             if (in_array($this->action, Router::$routes[$this->controller]))
             {
-                $this->get($this->controller, $this->action);
+                Router::get($this->controller, $this->action, $params);
             } else {
-                $this->get('students', 'error');
+                Router::get('students', 'error');
             }
         } else {
-            $this->get('students', 'error');
+            Router::get('students', 'error');
         }
     }
-
 
     static function parseUrl()
     {
@@ -48,21 +48,5 @@ class App
         {
             return $url = explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
         }
-    }
-
-
-    public function get($controller, $action)
-    {
-        require_once '../app/controllers/'.$controller.'.php';
-
-        switch ($controller)
-        {
-            case 'students':
-
-                $controller = new Students();
-                break;
-        }
-
-        $controller->{ $action }();
     }
 }

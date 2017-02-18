@@ -12,7 +12,7 @@ require_once 'lib/FormHandler.php';
 
 require_once 'lib/UUID.php';
 
-define('URL', '/registration/public/');
+const BASE_DIR = "/registration/public/";
 
 spl_autoload_register(function($class)
 {
