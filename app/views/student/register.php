@@ -494,13 +494,15 @@
                                             <div class="col-sm-5">
                                                 <label>Maraqlandığınız istiqaməti seçin</label>
                                                 <select name="direction" class="form-control">
-                                                    <option value="Java Developer">Java (SE/EE) Development</option>
-                                                    <option value="SQL Developer">SQL Development</option>
-                                                    <option value="Database Administrator">Database Administration</option>
-                                                    <option value="Network Administration">Network Administration</option>
-                                                    <option value="Web Developer Back-end (PHP)">Back-end Web Development (PHP)</option>
-                                                    <option value="Front-end Web Developer (HTML/CSS/JS)">Front-end Web Development (HTML/CSS/JS)</option>
-                                                    <option value="Graphic Design">Graphic(Web/UI) Design</option>
+                                                    <option value="Graphic Design">Qrafik dizayn</option>
+                                                    <option value="Front-end development">Front-end developent</option>
+                                                    <option value="Back-end development">Back-end development</option>
+                                                    <option value="Java development">Java Developement</option>
+                                                    <option value="Database Administration">Database Administration</option>
+                                                    <option value="Photography & Retouch">Fotoqrafiya & Retouch</option>
+
+
+
                                                 </select><br/>
                                                 <div id="robot_test">
                                                     <!--google robot test-->
