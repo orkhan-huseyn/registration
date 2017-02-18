@@ -7,8 +7,6 @@ class Students
     {
         $title    = "Qeydiyyat | Devcenter";
 
-        $courses = Course::all();
-
         require_once '../app/views/student/register.php';
     }
 

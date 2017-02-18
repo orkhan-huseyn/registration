@@ -28,9 +28,9 @@ class App
             $this->action = 'register';
         }
 
-        if (array_key_exists($this->controller, ROUTES))
+        if (array_key_exists($this->controller, Router::$routes))
         {
-            if (in_array($this->action, ROUTES[$this->controller]))
+            if (in_array($this->action, Router::$routes[$this->controller]))
             {
                 $this->get($this->controller, $this->action);
             } else {
