@@ -532,24 +532,24 @@
 
 <!-- Mainly scriptss -->
 <script src="<?php echo BASE_DIR;?>js/jquery-3.1.1.min.js"></script>
-<script src="<?php echo URL;?>js/bootstrap.min.js"></script>
-<script src="<?php echo URL;?>js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="<?php echo URL;?>js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/bootstrap.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="<?php echo BASE_DIR;?>js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="<?php echo URL;?>js/inspinia.js"></script>
-<script src="<?php echo URL;?>js/plugins/pace/pace.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/inspinia.js"></script>
+<script src="<?php echo BASE_DIR;?>js/plugins/pace/pace.min.js"></script>
 
 <!-- Input Mask-->
-<script src="<?php echo URL;?>js/plugins/jasny/jasny-bootstrap.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
 <!-- Steps -->
-<script src="<?php echo URL;?>js/plugins/staps/jquery.steps.js"></script>
+<script src="<?php echo BASE_DIR;?>js/plugins/staps/jquery.steps.js"></script>
 
 <!-- Jquery Validate -->
-<script src="<?php echo URL;?>js/plugins/validate/jquery.validate.min.js"></script>
+<script src="<?php echo BASE_DIR;?>js/plugins/validate/jquery.validate.min.js"></script>
 
-<script src="<?php echo URL;?>js/script.js"></script>
+<script src="<?php echo BASE_DIR;?>js/script.js"></script>
 
 <script>
     $(document).ready(function(){

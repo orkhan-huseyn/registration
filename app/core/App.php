@@ -24,7 +24,7 @@ class App
             $this->action = $url[1];
             unset($url[1]);
         } else {
-            $this->action = 'index';
+            $this->action = 'register';
         }
 
         $params = $url ? array_values($url) : [];
