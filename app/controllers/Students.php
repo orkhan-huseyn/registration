@@ -34,7 +34,7 @@ class Students
 
         $required_fields = [
             "student_id", "serial_id", "first_name", "last_name", "fathers_name", "birth_day",
-            "birth_month", "birth_year", "birth_place", "gender", "married", "phone_mobile", "phone_home", 
+            "birth_month", "birth_year", "birth_place", "gender", "married", "phone_mobile",
             "address", "email", "facebook", "about"
             ];
 
@@ -93,7 +93,7 @@ class Students
 
             $member_relation     = $_POST['member_relation'];
             $member_full_name    = $_POST['member_full_name'];
-            $member_phone_number   = $_POST['member_phone_number'];
+//            $member_phone_number   = $_POST['member_phone_number'];
 
             $member_count = count($member_relation);
 
@@ -157,7 +157,7 @@ class Students
 
                 for ($i=0; $i < $member_count; $i++)
                 {
-                    if (FamilyInfo::insert(UUID::v4(), $uuid, $member_relation[$i], $member_full_name[$i], $member_phone_number[$i]))
+                    if (FamilyInfo::insert(UUID::v4(), $uuid, $member_relation[$i], $member_full_name[$i]))
                     {
                         $family_ok = true;
                     }

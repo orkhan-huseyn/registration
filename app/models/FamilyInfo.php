@@ -49,12 +49,12 @@ class FamilyInfo
         return $list;
     }
 
-    public static function insert($info_id, $student_id, $relation, $full_name, $phone_number)
+    public static function insert($info_id, $student_id, $relation, $full_name)
     {
         $conn = Database::getInstance();
 
-        $stmt = $conn->prepare("INSERT INTO family_info (info_id, student_id, relation, full_name, phone_number) "
-            ."VALUES (:info_id, :student_id, :relation, :full_name, :phone_number)");
+        $stmt = $conn->prepare("INSERT INTO family_info (info_id, student_id, relation, full_name) "
+            ."VALUES (:info_id, :student_id, :relation, :full_name)");
 
         $stmt->bindParam(":info_id",       $info_id);
 
@@ -63,8 +63,6 @@ class FamilyInfo
         $stmt->bindParam(":relation",      $relation);
 
         $stmt->bindParam(":full_name",     $full_name);
-
-        $stmt->bindParam(":phone_number",  $phone_number);
 
         if ($stmt->execute())
         {

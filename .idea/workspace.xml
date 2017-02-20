@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8a865a49-6819-4e8d-bc71-d59a30199171" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/student/registered.php" afterPath="$PROJECT_DIR$/app/views/student/registered.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Students.php" afterPath="$PROJECT_DIR$/app/controllers/Students.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/FamilyInfo.php" afterPath="$PROJECT_DIR$/app/models/FamilyInfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/student/register.php" afterPath="$PROJECT_DIR$/app/views/student/register.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,13 +19,67 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="registered.php" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="registered.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/student/registered.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="34" column="66" lean-forward="true" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+            <state relative-caret-position="765">
+              <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/student/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="148" column="118" lean-forward="true" selection-start-line="148" selection-start-column="118" selection-end-line="148" selection-end-column="118" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Students.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Students.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="157" column="52" lean-forward="true" selection-start-line="157" selection-start-column="52" selection-end-line="157" selection-end-column="52" />
+              <folding>
+                <marker date="1487627732100" expanded="true" signature="573:579" ph=" " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Student.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Student.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="888">
+              <caret line="167" column="54" lean-forward="false" selection-start-line="167" selection-start-column="54" selection-end-line="167" selection-end-column="54" />
+              <folding>
+                <marker date="1486920309904" expanded="true" signature="1982:2004" ph="SELECT * FRO... students" />
+                <marker date="1486920309904" expanded="true" signature="2742:2785" ph="SELECT * FRO... students" />
+                <marker date="1486920309904" expanded="true" signature="3730:4177" ph="INSERT INTO students... " />
+                <marker date="1486920309904" expanded="true" signature="5559:5950" ph="UPDATE stude... " />
+                <marker date="1486920309904" expanded="true" signature="6945:6993" ph="UPDATE stude... " />
+                <marker date="1486920309904" expanded="true" signature="7167:7215" ph="UPDATE stude... " />
+                <marker date="1486920309904" expanded="true" signature="7388:7436" ph="UPDATE stude... " />
+                <marker date="1486920309904" expanded="true" signature="7613:7661" ph="UPDATE stude... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FamilyInfo.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/FamilyInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="64" column="55" lean-forward="false" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+              <folding>
+                <marker date="1487627762589" expanded="true" signature="619:667" ph="SELECT * fro... family_info" />
+                <marker date="1487627762589" expanded="true" signature="1177:1313" ph="INSERT INTO family_info... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,14 +125,15 @@
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Database.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/App.php" />
         <option value="$PROJECT_DIR$/app/core/App.php" />
-        <option value="$PROJECT_DIR$/app/views/student/register.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/init.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Students.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/register.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/registered.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Students.php" />
         <option value="$PROJECT_DIR$/app/views/student/registered.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/showappeal.php" />
+        <option value="$PROJECT_DIR$/app/views/student/register.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Students.php" />
+        <option value="$PROJECT_DIR$/app/models/FamilyInfo.php" />
       </list>
     </option>
   </component>
@@ -108,6 +165,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -234,8 +293,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,7 +396,8 @@
       <workItem from="1487429955641" duration="420000" />
       <workItem from="1487442740625" duration="4707000" />
       <workItem from="1487450443142" duration="220000" />
-      <workItem from="1487450772465" duration="723000" />
+      <workItem from="1487450772465" duration="735000" />
+      <workItem from="1487627561292" duration="203000" />
     </task>
     <task id="LOCAL-00001" summary="c&#10;">
       <created>1485961599528</created>
@@ -488,11 +546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487450655942</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="simplified">
+      <created>1487451502462</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1487451502462</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44001000" />
+    <option name="totallyTimeSpent" value="44216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -552,7 +617,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1487450622306" expanded="true" signature="573:579" ph=" " />
+            <marker date="1487627732100" expanded="true" signature="573:579" ph=" " />
           </folding>
         </state>
       </provider>
@@ -585,7 +650,7 @@
         <state relative-caret-position="408">
           <caret line="24" column="75" lean-forward="true" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
           <folding>
-            <marker date="1487450622306" expanded="true" signature="573:579" ph=" " />
+            <marker date="1487627732100" expanded="true" signature="573:579" ph=" " />
           </folding>
         </state>
       </provider>
@@ -618,7 +683,7 @@
         <state relative-caret-position="1564">
           <caret line="92" column="125" lean-forward="false" selection-start-line="92" selection-start-column="125" selection-end-line="92" selection-end-column="125" />
           <folding>
-            <marker date="1487450622306" expanded="true" signature="573:579" ph=" " />
+            <marker date="1487627732100" expanded="true" signature="573:579" ph=" " />
           </folding>
         </state>
       </provider>
@@ -652,7 +717,7 @@
         <state relative-caret-position="1462">
           <caret line="86" column="38" lean-forward="false" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
           <folding>
-            <marker date="1487450622306" expanded="true" signature="573:579" ph=" " />
+            <marker date="1487627732100" expanded="true" signature="573:579" ph=" " />
           </folding>
         </state>
       </provider>
@@ -670,7 +735,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1487450622306" expanded="true" signature="573:579" ph=" " />
+            <marker date="1487627732100" expanded="true" signature="573:579" ph=" " />
           </folding>
         </state>
       </provider>
@@ -688,7 +753,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1487450622306" expanded="true" signature="573:579" ph=" " />
+            <marker date="1487627732100" expanded="true" signature="573:579" ph=" " />
           </folding>
         </state>
       </provider>
@@ -795,34 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/FamilyInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="51" lean-forward="false" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-          <folding>
-            <marker date="1486918199000" expanded="true" signature="619:667" ph="SELECT * fro... family_info" />
-            <marker date="1486918199000" expanded="true" signature="1192:1357" ph="INSERT INTO family_info... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Student.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2839">
-          <caret line="167" column="54" lean-forward="false" selection-start-line="167" selection-start-column="54" selection-end-line="167" selection-end-column="54" />
-          <folding>
-            <marker date="1486920309904" expanded="true" signature="1982:2004" ph="SELECT * FRO... students" />
-            <marker date="1486920309904" expanded="true" signature="2742:2785" ph="SELECT * FRO... students" />
-            <marker date="1486920309904" expanded="true" signature="3730:4177" ph="INSERT INTO students... " />
-            <marker date="1486920309904" expanded="true" signature="5559:5950" ph="UPDATE stude... " />
-            <marker date="1486920309904" expanded="true" signature="6945:6993" ph="UPDATE stude... " />
-            <marker date="1486920309904" expanded="true" signature="7167:7215" ph="UPDATE stude... " />
-            <marker date="1486920309904" expanded="true" signature="7388:7436" ph="UPDATE stude... " />
-            <marker date="1486920309904" expanded="true" signature="7613:7661" ph="UPDATE stude... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69632">
@@ -855,14 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/student/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="519" column="26" lean-forward="true" selection-start-line="519" selection-start-column="26" selection-end-line="519" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/init.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -872,45 +901,62 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/init.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/sidebar.php">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/sidebar.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Students.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/register.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/registered.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/showappeal.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/student/registered.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        <state relative-caret-position="765">
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Students.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/register.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/registered.php">
+    <entry file="file://$PROJECT_DIR$/app/views/student/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="49" column="51" lean-forward="true" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+        <state relative-caret-position="119">
+          <caret line="148" column="118" lean-forward="true" selection-start-line="148" selection-start-column="118" selection-end-line="148" selection-end-column="118" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Students.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        <state relative-caret-position="374">
+          <caret line="157" column="52" lean-forward="true" selection-start-line="157" selection-start-column="52" selection-end-line="157" selection-end-column="52" />
           <folding>
-            <marker date="1487450622306" expanded="true" signature="573:579" ph=" " />
+            <marker date="1487627732100" expanded="true" signature="573:579" ph=" " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/showappeal.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Student.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1377">
-          <caret line="72" column="73" lean-forward="false" selection-start-line="72" selection-start-column="73" selection-end-line="72" selection-end-column="73" />
-          <folding />
+        <state relative-caret-position="888">
+          <caret line="167" column="54" lean-forward="false" selection-start-line="167" selection-start-column="54" selection-end-line="167" selection-end-column="54" />
+          <folding>
+            <marker date="1486920309904" expanded="true" signature="1982:2004" ph="SELECT * FRO... students" />
+            <marker date="1486920309904" expanded="true" signature="2742:2785" ph="SELECT * FRO... students" />
+            <marker date="1486920309904" expanded="true" signature="3730:4177" ph="INSERT INTO students... " />
+            <marker date="1486920309904" expanded="true" signature="5559:5950" ph="UPDATE stude... " />
+            <marker date="1486920309904" expanded="true" signature="6945:6993" ph="UPDATE stude... " />
+            <marker date="1486920309904" expanded="true" signature="7167:7215" ph="UPDATE stude... " />
+            <marker date="1486920309904" expanded="true" signature="7388:7436" ph="UPDATE stude... " />
+            <marker date="1486920309904" expanded="true" signature="7613:7661" ph="UPDATE stude... " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/student/registered.php">
+    <entry file="file://$PROJECT_DIR$/app/models/FamilyInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="34" column="66" lean-forward="true" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
-          <folding />
+        <state relative-caret-position="395">
+          <caret line="64" column="55" lean-forward="false" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+          <folding>
+            <marker date="1487627762589" expanded="true" signature="619:667" ph="SELECT * fro... family_info" />
+            <marker date="1487627762589" expanded="true" signature="1177:1313" ph="INSERT INTO family_info... " />
+          </folding>
         </state>
       </provider>
     </entry>

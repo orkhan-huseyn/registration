@@ -146,7 +146,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Ev Telefonu *</label>
-                                            <input name="phone_home" class="form-control required" data-mask="(999) 999-99-99">
+                                            <input name="phone_home" class="form-control" data-mask="(999) 999-99-99">
                                         </div>
                                         <div class="form-group">
                                             <label>E-poçt *</label>
@@ -471,10 +471,10 @@
                                             <div class="col-sm-6"><input name="member_full_name[]" class="form-control required" type="text"></div>
                                         </div>
 
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Əlaqə telefonu</label>
-                                            <div class="col-sm-6"><input name="member_phone_number[]" class="form-control required" type="text" data-mask="(999) 999-99-99"></div>
-                                        </div>
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="col-sm-3 control-label">Əlaqə telefonu</label>-->
+<!--                                            <div class="col-sm-6"><input name="member_phone_number[]" class="form-control required" type="text" data-mask="(999) 999-99-99"></div>-->
+<!--                                        </div>-->
                                         <br>
                                         <div class="hr-line-dashed"></div>
                                     </div>
