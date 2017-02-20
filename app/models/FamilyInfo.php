@@ -12,10 +12,8 @@ class FamilyInfo
 
     public $full_name;
 
-    public $phone_number;
 
-
-    public function __construct($info_id, $student_id, $relation, $full_name, $phone_number)
+    public function __construct($info_id, $student_id, $relation, $full_name)
     {
 
         $this->info_id      = $info_id;
@@ -25,8 +23,6 @@ class FamilyInfo
         $this->relation     = $relation;
 
         $this->full_name    = $full_name;
-
-        $this->phone_number = $phone_number;
 
     }
 
@@ -43,7 +39,7 @@ class FamilyInfo
         foreach ($stmt->fetchAll() as $family_info)
         {
             $list[] = new FamilyInfo($family_info['info_id'], $family_info['student_id'], $family_info['relation'],
-                $family_info['full_name'], $family_info['phone_number']);
+                $family_info['full_name']);
         }
 
         return $list;
