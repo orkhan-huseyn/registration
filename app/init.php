@@ -2,6 +2,8 @@
 
 session_start();
 
+require_once 'lib/Mobile_Detect.php';
+
 require_once 'core/Router.php';
 
 require_once 'core/App.php';

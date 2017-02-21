@@ -22,9 +22,9 @@ class Students
         }
     }
 
-    public function error()
+    public function error($message)
     {
-        $_SESSION['error'] = "<strong>Xəta baş verdi!</strong> &nbsp;Qeydiyyat üçün lazımi xanaları doldurduqdan sonra bir daha cəhd etməyiniz xahiş olunur.";
+        $_SESSION['error'] = "<strong>Xəta baş verdi!</strong> &nbsp;".$message;
 
         header('location: '.BASE_DIR);
     }
@@ -38,9 +38,15 @@ class Students
             "address", "email", "facebook", "about"
             ];
 
-        if (!FormHandler::validate_input($required_fields))
+        $detect = new Mobile_Detect();
+
+        if ($detect->isMobile()) {
+
+            $this->error("Üzr istəyirik, qeydiyyatdan keçmək üçün mobil qurğu istifadə edilə bilməz.");
+        }
+        else if (!FormHandler::validate_input($required_fields))
         {
-            $this->error();
+            $this->error("Zəhmət olmasa bütün xanaları doldurub bir daha cəhd edin.");
 
         } else {
             $student_id          = $_POST['student_id'];
