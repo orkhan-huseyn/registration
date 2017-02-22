@@ -18,7 +18,7 @@ class Students
 
             require_once '../app/views/student/registered.php';
         } else {
-            $this->error();
+            $this->error("Zəhmət olmasa bütün xanaları doldurub bir daha cəhd edin.");
         }
     }
 
@@ -97,12 +97,6 @@ class Students
 
             $it_count = count($it);
 
-            $member_relation     = $_POST['member_relation'];
-            $member_full_name    = $_POST['member_full_name'];
-//            $member_phone_number   = $_POST['member_phone_number'];
-
-            $member_count = count($member_relation);
-
             $direction = $_POST["direction"];
 
             $uuid = UUID::v4();
@@ -110,7 +104,7 @@ class Students
             $root_path = "img/profile/student/";
             $file_name = "";
 
-            $student_ok = $education_ok = $family_ok = false;
+            $student_ok = $education_ok = false;
 
             if($student_id==0)
             {
@@ -161,20 +155,12 @@ class Students
                     }
                 }
 
-                for ($i=0; $i < $member_count; $i++)
-                {
-                    if (FamilyInfo::insert(UUID::v4(), $uuid, $member_relation[$i], $member_full_name[$i]))
-                    {
-                        $family_ok = true;
-                    }
-                }
-
             } else {
                 Student::update($student_id, $serial_id, $first_name, $last_name, $fathers_name,
                     $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
             }
 
-            if ($student_ok && $education_ok && $family_ok)
+            if ($student_ok && $education_ok)
             {
 
                 $_SESSION['registered'] = true;
@@ -182,7 +168,7 @@ class Students
             
                 header('location: '.BASE_DIR.'students/registered/');
             } else {
-                $this->error();
+                $this->error("Zəhmət olmasa bütün xanaları doldurub bir daha cəhd edin.");
             }
         }
     }
