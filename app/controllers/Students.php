@@ -77,15 +77,22 @@ class Students
             $education_count = count($education_level);
 
 
-            $company             = $_POST['company'];
-            $position            = $_POST['position'];
-            $ex_start_month      = $_POST['ex_start_month'];
-            $ex_start_year       = $_POST['ex_start_year'];
-            $ex_end_month        = $_POST['ex_end_month'];
-            $ex_end_year         = $_POST['ex_end_year'];
-            $job_description     = $_POST['job_description'];
+            $company = $position = $ex_start_month = $ex_start_year = $ex_end_month = $ex_end_year = $job_description = "";
 
-            $experience_count = count($company);
+            $experience_count = 0;
+
+            if (isset($_POST['company']) && isset($_POST['position']) && isset($_POST['job_description']))
+            {
+                $company             = $_POST['company'];
+                $position            = $_POST['position'];
+                $ex_start_month      = $_POST['ex_start_month'];
+                $ex_start_year       = $_POST['ex_start_year'];
+                $ex_end_month        = $_POST['ex_end_month'];
+                $ex_end_year         = $_POST['ex_end_year'];
+                $job_description     = $_POST['job_description'];
+
+                $experience_count = count($company);
+            }
 
             $lang                = $_POST['lang'];
             $lang_level          = $_POST['lang_level'];
@@ -160,6 +167,7 @@ class Students
                 }
 
             } else {
+
                 Student::update($student_id, $serial_id, $first_name, $last_name, $fathers_name,
                     $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
             }
