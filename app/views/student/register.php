@@ -67,11 +67,11 @@
                                     <?php echo $_SESSION['error'];?>
                                     <?php unset($_SESSION['error']);?>
                                 </div>
-                                <?php } else if (isset($_SESSION['info'])) { ?>
+                                <?php } else if (isset($_SESSION['mobile_info'])) { ?>
                                 <div class="alert alert-info alert-dismissable">
                                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                    <?php echo $_SESSION['info'];?>
-                                    <?php unset($_SESSION['info']);?>
+                                    <?php echo $_SESSION['mobile_info'];?>
+                                    <?php unset($_SESSION['mobile_info']);?>
                                 </div>
                                 <?php } ?>
                                 <div class="row">
