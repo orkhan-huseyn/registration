@@ -111,48 +111,52 @@ class Students
                 $msg = FormHandler::upload('profile_img', '../../cpanel/public/img/profile/student/');
 
                 if($msg=="empty") {
-                    $file_name = "img/profile/default.jpg";
+
+                    $this->error("Qeydiyyat üçün müvafiq profil şəkli mütləqdir.");
+
                 } else {
+
                     $file_name = $root_path.$msg;
-                }
 
-                if (Student::insert($uuid, $serial_id, $file_name, $first_name, $last_name, $fathers_name,$birth_date,
-                    $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook, $direction))
-                {
-                    $student_ok = true;
-                }
-
-                for($i=0; $i < $education_count; $i++)
-                {
-                    if (Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]))
+                    if (Student::insert($uuid, $serial_id, $file_name, $first_name, $last_name, $fathers_name,$birth_date,
+                        $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook, $direction))
                     {
-                        $education_ok = true;
+                        $student_ok = true;
                     }
-                }
 
-                for ($i=0; $i < $experience_count; $i++)
-                {
-                    if(!empty($company[$i]))
+                    for($i=0; $i < $education_count; $i++)
                     {
-                        Experience::insert(UUID::v4(), $uuid, $company[$i], $position[$i], $job_description[$i], 
-                        $ex_start_month[$i].' '.$ex_start_year[$i], $ex_end_month[$i].' '.$ex_end_year[$i]);
+                        if (Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]))
+                        {
+                            $education_ok = true;
+                        }
                     }
-                }
 
-                for ($i=0; $i < $lang_count; $i++)
-                {
-                    if ($lang[$i] != "ch")
+                    for ($i=0; $i < $experience_count; $i++)
                     {
-                        LangKnowledge::insert(UUID::v4(), $uuid, $lang[$i], $lang_level[$i]);
+                        if(!empty($company[$i]))
+                        {
+                            Experience::insert(UUID::v4(), $uuid, $company[$i], $position[$i], $job_description[$i],
+                                $ex_start_month[$i].' '.$ex_start_year[$i], $ex_end_month[$i].' '.$ex_end_year[$i]);
+                        }
                     }
-                }
 
-                for ($i=0; $i < $it_count; $i++)
-                {
-                    if(!empty($it[$i]))
+                    for ($i=0; $i < $lang_count; $i++)
                     {
-                        ItKnowledge::insert(UUID::v4(), $uuid, $it[$i], $it_level[$i]);
+                        if ($lang[$i] != "ch")
+                        {
+                            LangKnowledge::insert(UUID::v4(), $uuid, $lang[$i], $lang_level[$i]);
+                        }
                     }
+
+                    for ($i=0; $i < $it_count; $i++)
+                    {
+                        if(!empty($it[$i]))
+                        {
+                            ItKnowledge::insert(UUID::v4(), $uuid, $it[$i], $it_level[$i]);
+                        }
+                    }
+
                 }
 
             } else {

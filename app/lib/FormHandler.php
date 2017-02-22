@@ -27,6 +27,7 @@ class FormHandler
         if (empty($_FILES[$file_to_upload]["name"]))
         {
             return "empty";
+
         } else {
             $target_dir = $path;
             $target_file = $target_dir.date("Y-m-d-H-i-s-").basename($_FILES[$file_to_upload]['name']);
