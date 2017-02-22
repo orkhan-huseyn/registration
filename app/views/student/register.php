@@ -65,14 +65,20 @@
                                 <div class="alert alert-danger alert-dismissable">
                                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                                     <?php echo $_SESSION['error'];?>
+                                    <?php unset($_SESSION['error']);?>
+                                </div>
+                                <?php } else if (isset($_SESSION['info'])) { ?>
+                                <div class="alert alert-info alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                    <?php echo $_SESSION['info'];?>
+                                    <?php unset($_SESSION['info']);?>
                                 </div>
                                 <?php } ?>
-                                <?php unset($_SESSION['error']);?>
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Ş/V no *</label>
-                                            <input id="serial" name="serial_id" type="text" class="form-control required" data-mask="AZE9999999">
+                                            <input id="serial" name="serial_id" type="text" class="form-control required" data-mask="AZE99999999">
                                             <input type="hidden" name="student_id" value="0"/>
                                         </div>
                                         <div class="form-group">
@@ -174,7 +180,15 @@
                                     <div id="education_info" class="form-horizontal">
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Təhsil pilləsi</label>
-                                            <div class="col-sm-9"><input name="education_level[]" class="form-control required" type="text"></div>
+                                            <div class="col-sm-9">
+                                                <select name="edcation_level[]" id="levels" class="form-control required">
+                                                    <option value="Orta">Orta</option>
+                                                    <option value="Orta-ixtisas">Orta-ixtisas</option>
+                                                    <option value="Tələbə">Tələbə</option>
+                                                    <option value="Bakalavr">Bakalavr</option>
+                                                    <option value="Magistr">Magistr</option>
+                                                </select>
+                                            </div>
                                         </div>
 
                                         <div class="form-group">
@@ -441,44 +455,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </fieldset>
-                            <h1>Ailə</h1>
-                            <fieldset>
-                                <h2>Ailə vəziyyəti</h2>
-                                <div class="container-fluid">
-                                    <div id="family_tab" class="form-horizontal">
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Qohumluq dərəcəsi</label>
-                                            <div class="col-sm-6">
-                                                <select name="member_relation[]" class="form-control required">
-                                                    <option value="Ata">Ata</option>
-                                                    <option value="Ana">Ana</option>
-                                                    <option value="Bacı">Bacı</option>
-                                                    <option value="Qardaş">Qardaş</option>
-                                                    <option value="Ər">Ər</option>
-                                                    <option value="Arvad">Arvad</option>
-                                                    <option value="Qayınana">Qayınana</option>
-                                                    <option value="Qayınata">Qayınata</option>
-                                                    <option value="Oğul">Oğul</option>
-                                                    <option value="Qız">Qız</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Tam adı</label>
-                                            <div class="col-sm-6"><input name="member_full_name[]" class="form-control required" type="text"></div>
-                                        </div>
-
-<!--                                        <div class="form-group">-->
-<!--                                            <label class="col-sm-3 control-label">Əlaqə telefonu</label>-->
-<!--                                            <div class="col-sm-6"><input name="member_phone_number[]" class="form-control required" type="text" data-mask="(999) 999-99-99"></div>-->
-<!--                                        </div>-->
-                                        <br>
-                                        <div class="hr-line-dashed"></div>
-                                    </div>
-                                    <button type="button" onclick="addmember()" class="btn btn-primary btn-circle col-md-offset-6"><i class="fa fa-plus"></i></button>
                                 </div>
                             </fieldset>
                             <h1>Yekun</h1>

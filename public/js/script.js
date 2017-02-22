@@ -11,7 +11,15 @@ function addEducation() {
         '</button>' +
         '</div><div class="form-group">' +
         '<label class="col-sm-3 control-label">Təhsil pilləsi</label>' +
-        '<div class="col-sm-9"><input name="education_level[]" class="form-control required" type="text"></div>' +
+        '<div class="col-sm-9">' +
+        '<select name="edcation_level[]" id="levels" class="form-control required">' +
+        '<option value="Orta">Orta</option>' +
+        '<option value="Orta-ixtisas">Orta-ixtisas</option>' +
+        '<option value="Tələbə">Tələbə</option>' +
+        '<option value="Bakalavr">Bakalavr</option>' +
+        '<option value="Magistr">Magistr</option>' +
+        '</select>' +
+        '</div>' +
         '</div>' +
         '<div class="form-group">' +
         '<label class="col-sm-3 control-label">Təhsil müəssisəsi</label>' +
@@ -196,44 +204,6 @@ function addItKnowldge() {
         '<i class="fa fa-times"></i></button>' +
         '</div></div>');
     it++;
-}
-
-var member = 2;
-
-function delmember(num) {
-    $('#family' + num).remove();
-    member--;
-}
-
-function addmember() {
-    $('#family_tab').append('<div id="family' + member + '">' +
-        '<div class="form-group"><button onclick="delmember(' + member + ')" class="pull-right btn btn-danger btn-circle">' +
-        '<i class="fa fa-times"></i></button></div>' +
-        '<div class="form-group">' +
-        '<label class="col-sm-3 control-label">Qohumluq dərəcəsi</label>' +
-        '<div class="col-sm-6">' +
-        '<select name="member_relation[]" class="form-control required">' +
-        '<option value="Ata">Ata</option>' +
-        '<option value="Ana">Ana</option>' +
-        '<option value="Bacı">Bacı</option>' +
-        '<option value="Qardaş">Qardaş</option>' +
-        '<option value="Ər">Ər</option>' +
-        '<option value="Arvad">Arvad</option>' +
-        '<option value="Qayınana">Qayınana</option>' +
-        '<option value="Qayınata">Qayınata</option>' +
-        '<option value="Oğul">Oğul</option>' +
-        '<option value="Qız">Qız</option>' +
-        '</select>' +
-        '</div>' +
-        '</div>' +
-        '<div class="form-group">' +
-        '<label class="col-sm-3 control-label">Tam adı</label>' +
-        '<div class="col-sm-6"><input name="member_full_name[]" class="form-control required" type="text"></div>' +
-        '</div>' +
-        '<br>' +
-        '<div class="hr-line-dashed">' +
-        '</div></div>');
-    member++;
 }
 
 var lang = 2;

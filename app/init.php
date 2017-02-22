@@ -20,3 +20,6 @@ spl_autoload_register(function($class)
 {
     require_once '../app/models/'.$class.'.php';
 });
+
+$_SESSION['info'] = "<strong>Qeydiyyat yalnız dizüstü və ya masaüstü kompyuterlər vasitəsi ilə edilə bilər.</strong>"
+    ."<br/>Əgər qeydiyyat üçün mobil qurğudan istifadə edirsinizsə qurğunu dəyişməyiniz xahiş olunur. Təşəkkürlər!";
