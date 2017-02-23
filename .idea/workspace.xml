@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a865a49-6819-4e8d-bc71-d59a30199171" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/student/register.php" afterPath="$PROJECT_DIR$/app/views/student/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Students.php" afterPath="$PROJECT_DIR$/app/controllers/Students.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,18 +21,18 @@
       <file leaf-file-name="registered.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/student/registered.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
+            <state relative-caret-position="0">
               <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/student/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="362" column="54" lean-forward="true" selection-start-line="362" selection-start-column="54" selection-end-line="362" selection-end-column="54" />
+            <state relative-caret-position="165">
+              <caret line="377" column="22" lean-forward="true" selection-start-line="377" selection-start-column="22" selection-end-line="377" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -50,13 +50,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Students.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Students.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Students.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="86" lean-forward="true" selection-start-line="20" selection-start-column="86" selection-end-line="20" selection-end-column="86" />
+            <state relative-caret-position="284">
+              <caret line="168" column="35" lean-forward="false" selection-start-line="168" selection-start-column="35" selection-end-line="168" selection-end-column="35" />
               <folding>
-                <marker date="1487759835029" expanded="true" signature="640:646" ph=" " />
+                <marker date="1487858626303" expanded="true" signature="640:646" ph=" " />
               </folding>
             </state>
           </provider>
@@ -110,10 +110,10 @@
         <option value="$PROJECT_DIR$/public/js/script.js" />
         <option value="$PROJECT_DIR$/app/init.php" />
         <option value="$PROJECT_DIR$/app/lib/FormHandler.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Students.php" />
         <option value="$PROJECT_DIR$/app/views/student/registered.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/init.php" />
         <option value="$PROJECT_DIR$/app/views/student/register.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Students.php" />
       </list>
     </option>
   </component>
@@ -405,7 +405,7 @@
       <workItem from="1487775591471" duration="379000" />
       <workItem from="1487846054868" duration="81000" />
       <workItem from="1487848607894" duration="84000" />
-      <workItem from="1487855402085" duration="2189000" />
+      <workItem from="1487855402085" duration="2901000" />
     </task>
     <task id="LOCAL-00001" summary="c&#10;">
       <created>1485961599528</created>
@@ -638,11 +638,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487857592408</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="added google captcha">
+      <created>1487857920966</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1487857920966</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52271000" />
+    <option name="totallyTimeSpent" value="52983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -688,7 +695,8 @@
     <MESSAGE value="removed family info" />
     <MESSAGE value="made profile picture required" />
     <MESSAGE value="education level" />
-    <option name="LAST_COMMIT_MESSAGE" value="education level" />
+    <MESSAGE value="added google captcha" />
+    <option name="LAST_COMMIT_MESSAGE" value="added google captcha" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -934,7 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/register.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/FamilyInfo.php" />
     <entry file="file://$PROJECT_DIR$/app/models/FamilyInfo.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.641/Mobile-Detect-2.8.24/Mobile_Detect.php" />
@@ -962,19 +969,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Students.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="86" lean-forward="true" selection-start-line="20" selection-start-column="86" selection-end-line="20" selection-end-column="86" />
-          <folding>
-            <marker date="1487759835029" expanded="true" signature="640:646" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/student/registered.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
+        <state relative-caret-position="0">
           <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
           <folding />
         </state>
@@ -989,12 +986,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6732">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/student/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="362" column="54" lean-forward="true" selection-start-line="362" selection-start-column="54" selection-end-line="362" selection-end-column="54" />
+        <state relative-caret-position="165">
+          <caret line="377" column="22" lean-forward="true" selection-start-line="377" selection-start-column="22" selection-end-line="377" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Students.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="168" column="35" lean-forward="false" selection-start-line="168" selection-start-column="35" selection-end-line="168" selection-end-column="35" />
+          <folding>
+            <marker date="1487858626303" expanded="true" signature="640:646" ph=" " />
           </folding>
         </state>
       </provider>

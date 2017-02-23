@@ -111,7 +111,7 @@ class Students
             $root_path = "img/profile/student/";
             $file_name = "";
 
-            $student_ok = $education_ok = false;
+            $student_ok = false;
 
             if($student_id==0)
             {
@@ -133,9 +133,11 @@ class Students
 
                     for($i=0; $i < $education_count; $i++)
                     {
-                        if (Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]))
+                        if ($education_level[$i]!="ch")
                         {
-                            $education_ok = true;
+                            Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]);
+                        } else {
+                            $this->error("Zəhmət olmasa təhsil məlumatlarını düzgün daxil edin.");
                         }
                     }
 
@@ -164,23 +166,23 @@ class Students
                         }
                     }
 
+                    if ($student_ok)
+                    {
+
+                        $_SESSION['registered'] = true;
+                        $_SESSION['student_full_name'] = $last_name.' '.$first_name;
+
+                        header('location: '.BASE_DIR.'students/registered/');
+                    } else {
+                        $this->error("Zəhmət olmasa bütün xanaları doldurub bir daha cəhd edin.");
+                    }
+
                 }
 
             } else {
 
                 Student::update($student_id, $serial_id, $first_name, $last_name, $fathers_name,
                     $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
-            }
-
-            if ($student_ok && $education_ok)
-            {
-
-                $_SESSION['registered'] = true;
-                $_SESSION['student_full_name'] = $last_name.' '.$first_name;
-            
-                header('location: '.BASE_DIR.'students/registered/');
-            } else {
-                $this->error("Zəhmət olmasa bütün xanaları doldurub bir daha cəhd edin.");
             }
         }
     }
