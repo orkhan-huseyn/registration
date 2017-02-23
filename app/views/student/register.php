@@ -346,7 +346,7 @@
                                         <div class="form-group">
                                             <div class="col-sm-3">
                                                 <img id="img" class="img-circle" 
-                                                src="http://localhost/cpanel/public/img/profile/default.jpg" width="200" height="200" alt="your image"/>
+                                                src="<?php echo APP;?>public/img/profile/default.jpg" width="200" height="200" alt="your image"/>
                                             </div>
                                             <div class="col-sm-5">
                                                 <label>Maraqlandığınız istiqaməti seçin</label>

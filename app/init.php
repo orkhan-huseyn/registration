@@ -16,6 +16,8 @@ require_once 'lib/UUID.php';
 
 const BASE_DIR = "/registration/public/";
 
+const APP = "/cpanel/";
+
 spl_autoload_register(function($class)
 {
     require_once '../app/models/'.$class.'.php';

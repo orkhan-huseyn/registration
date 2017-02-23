@@ -115,7 +115,7 @@ class Students
 
             if($student_id==0)
             {
-                $msg = FormHandler::upload('profile_img', '../../cpanel/public/img/profile/student/');
+                $msg = FormHandler::upload('profile_img', '../..'.APP.'public/img/profile/student/');
 
                 if($msg=="empty") {
 
