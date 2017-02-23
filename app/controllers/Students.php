@@ -133,7 +133,7 @@ class Students
 
                     for($i=0; $i < $education_count; $i++)
                     {
-                        if ($education_level[$i]!="ch")
+                        if ($start_year[$i]!="ch" || $end_year[$i]!="ch")
                         {
                             Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]);
                         } else {
