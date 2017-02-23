@@ -359,7 +359,7 @@
                                                     <option value="Photography & Retouch">Fotoqrafiya & Retouch</option>
                                                 </select><br/>
                                                 <div id="robot_test">
-                                                    <!--google robot test-->
+                                                    <div class="g-recaptcha" data-sitekey="6LffphYUAAAAAB0Di_mZxz_SgmKvkNN-TNxFqcaW"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -407,6 +407,8 @@
 <script src="<?php echo BASE_DIR;?>js/plugins/validate/jquery.validate.min.js"></script>
 
 <script src="<?php echo BASE_DIR;?>js/script.js"></script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
 <script>
     $(document).ready(function(){
