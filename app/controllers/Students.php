@@ -48,7 +48,13 @@ class Students
         {
             $this->error("Zəhmət olmasa bütün xanaları doldurub bir daha cəhd edin.");
 
-        } else {
+        } else if (isset($_POST['start_year']) && isset($_POST['end_year'])) {
+
+            if ($_POST['start_year']=="ch" || $_POST['end_year']) {
+                $this->error("Zəhmət olmasa təhsil məlumatlarını düzgün daxil edin!");
+            }
+
+        }else {
             $student_id          = $_POST['student_id'];
             $serial_id           = $_POST['serial_id'];
             $first_name          = $_POST['first_name'];
@@ -133,12 +139,7 @@ class Students
 
                     for($i=0; $i < $education_count; $i++)
                     {
-                        if ($start_year[$i]!="ch" || $end_year[$i]!="ch")
-                        {
-                            Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]);
-                        } else {
-                            $this->error("Zəhmət olmasa təhsil məlumatlarını düzgün daxil edin.");
-                        }
+                        Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]);
                     }
 
                     for ($i=0; $i < $experience_count; $i++)
