@@ -151,7 +151,7 @@
                                             <input name="phone_mobile" class="form-control required" data-mask="(999) 999-99-99">
                                         </div>
                                         <div class="form-group">
-                                            <label>Ev Telefonu *</label>
+                                            <label>Ev Telefonu </label>
                                             <input name="phone_home" class="form-control" data-mask="(999) 999-99-99">
                                         </div>
                                         <div class="form-group">
@@ -179,7 +179,7 @@
                                 <div class="row">
                                     <div id="education_info" class="form-horizontal">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Təhsil pilləsi</label>
+                                            <label class="col-sm-3 control-label">Təhsil pilləsi *</label>
                                             <div class="col-sm-9">
                                                 <select name="education_level[]" id="levels" class="form-control required">
                                                     <option value="Orta">Orta</option>
@@ -192,19 +192,20 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Təhsil müəssisəsi</label>
+                                            <label class="col-sm-3 control-label">Təhsil müəssisəsi *</label>
                                             <div class="col-sm-9"><input name="institution[]" class="form-control required" type="text"></div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Təhsil aldığı ixtisas</label>
+                                            <label class="col-sm-3 control-label">Təhsil aldığı ixtisas *</label>
                                             <div class="col-sm-9"><input name="major[]" class="form-control required" type="text"></div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Başladığı il</label>
+                                            <label class="col-sm-3 control-label">Başladığı il *</label>
                                             <div class="col-sm-3">
                                                 <select class="form-control" name="start_year[]">
+                                                    <option value="ch">Seçim edin</option>
                                                     <option value="2000">2000</option>
                                                     <option value="2001">2001</option>
                                                     <option value="2002">2002</option>
@@ -225,9 +226,10 @@
                                                 </select>
                                             </div>
 
-                                            <label class="col-sm-3 control-label">Bitirdiyi il</label>
+                                            <label class="col-sm-3 control-label">Bitirdiyi il *</label>
                                             <div class="col-sm-3">
                                                 <select class="form-control" name="end_year[]">
+                                                    <option value="ch">Seçim edin</option>
                                                     <option value="2000">2000</option>
                                                     <option value="2001">2001</option>
                                                     <option value="2002">2002</option>
@@ -268,127 +270,6 @@
                                 <h2>İş və ya Könüllülük Təcrübəsi</h2><br/>
                                 <div class="container-fluid">
                                     <div id="experience" class="form-horizontal">
-<!--                                        <div class="form-group">-->
-<!--                                            <label class="col-sm-3 control-label">İş / təcrübə yeri</label>-->
-<!--                                            <div class="col-sm-9"><input name="company[]" class="form-control" type="text"></div>-->
-<!--                                        </div>-->
-<!---->
-<!--                                        <div class="form-group">-->
-<!--                                            <label class="col-sm-3 control-label">Vəzifə</label>-->
-<!--                                            <div class="col-sm-9"><input name="position[]" class="form-control" type="text"></div>-->
-<!--                                        </div>-->
-<!---->
-<!--                                        <div class="form-group">-->
-<!--                                            <label class="col-sm-3 control-label">Başlama tarixi</label>-->
-<!--                                            <div class="col-sm-3">-->
-<!--                                                <div class="row">-->
-<!--                                                    <div class="col-sm-6">-->
-<!--                                                        <select class="form-control" name="ex_start_month[]">-->
-<!--                                                            <option value="Yanvar">Yanvar</option>-->
-<!--                                                            <option value="Fevral">Fevral</option>-->
-<!--                                                            <option value="Mart">Mart</option>-->
-<!--                                                            <option value="Aprel">Aprel</option>-->
-<!--                                                            <option value="May">May</option>-->
-<!--                                                            <option value="İyun">İyun</option>-->
-<!--                                                            <option value="İyul">İyul</option>-->
-<!--                                                            <option value="Avqust">Avqust</option>-->
-<!--                                                            <option value="Sentyabr">Sentyabr</option>-->
-<!--                                                            <option value="Oktyabr">Oktyabr</option>-->
-<!--                                                            <option value="Noyabr">Noyabr</option>-->
-<!--                                                            <option value="Dekabr">Dekabr</option>-->
-<!--                                                        </select>-->
-<!--                                                    </div>-->
-<!--                                                    <div class="col-sm-6">-->
-<!--                                                        <select class="form-control" name="ex_start_year[]">-->
-<!--                                                            <option value="1992">1992</option>-->
-<!--                                                            <option value="1993">1993</option>-->
-<!--                                                            <option value="1994">1994</option>-->
-<!--                                                            <option value="1995">1995</option>-->
-<!--                                                            <option value="1996">1996</option>-->
-<!--                                                            <option value="1997">1997</option>-->
-<!--                                                            <option value="1998">1998</option>-->
-<!--                                                            <option value="1999">1999</option>-->
-<!--                                                            <option value="2000">2000</option>-->
-<!--                                                            <option value="2001">2001</option>-->
-<!--                                                            <option value="2002">2002</option>-->
-<!--                                                            <option value="2003">2003</option>-->
-<!--                                                            <option value="2004">2004</option>-->
-<!--                                                            <option value="2005">2005</option>-->
-<!--                                                            <option value="2006">2006</option>-->
-<!--                                                            <option value="2007">2007</option>-->
-<!--                                                            <option value="2008">2008</option>-->
-<!--                                                            <option value="2009">2009</option>-->
-<!--                                                            <option value="2010">2010</option>-->
-<!--                                                            <option value="2011">2011</option>-->
-<!--                                                            <option value="2012">2012</option>-->
-<!--                                                            <option value="2013">2013</option>-->
-<!--                                                            <option value="2014">2014</option>-->
-<!--                                                            <option value="2015">2015</option>-->
-<!--                                                            <option value="2016">2016</option>-->
-<!--                                                            <option value="2017">2017</option>-->
-<!--                                                        </select>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!---->
-<!--                                            <label class="col-sm-3 control-label">Bitirmə tarixi </label>-->
-<!--                                            <div class="col-sm-3">-->
-<!--                                                <div class="row">-->
-<!--                                                    <div class="col-sm-6">-->
-<!--                                                    <select class="form-control" id="ex_end_month" name="ex_end_month[]">-->
-<!--                                                        <option value="Yanvar">Yanvar</option>-->
-<!--                                                        <option value="Fevral">Fevral</option>-->
-<!--                                                        <option value="Mart">Mart</option>-->
-<!--                                                        <option value="Aprel">Aprel</option>-->
-<!--                                                        <option value="May">May</option>-->
-<!--                                                        <option value="İyun">İyun</option>-->
-<!--                                                        <option value="İyul">İyul</option>-->
-<!--                                                        <option value="Avqust">Avqust</option>-->
-<!--                                                        <option value="Sentyabr">Sentyabr</option>-->
-<!--                                                        <option value="Oktyabr">Oktyabr</option>-->
-<!--                                                        <option value="Noyabr">Noyabr</option>-->
-<!--                                                        <option value="Dekabr">Dekabr</option>-->
-<!--                                                    </select>-->
-<!--                                                    </div>-->
-<!--                                                    <div class="col-sm-6">-->
-<!--                                                    <select class="form-control" id="ex_end_year" name="ex_end_year[]">-->
-<!--                                                        <option value="1993">1993</option>-->
-<!--                                                        <option value="1994">1994</option>-->
-<!--                                                        <option value="1995">1995</option>-->
-<!--                                                        <option value="1996">1996</option>-->
-<!--                                                        <option value="1997">1997</option>-->
-<!--                                                        <option value="1998">1998</option>-->
-<!--                                                        <option value="1999">1999</option>-->
-<!--                                                        <option value="2000">2000</option>-->
-<!--                                                        <option value="2001">2001</option>-->
-<!--                                                        <option value="2002">2002</option>-->
-<!--                                                        <option value="2003">2003</option>-->
-<!--                                                        <option value="2004">2004</option>-->
-<!--                                                        <option value="2005">2005</option>-->
-<!--                                                        <option value="2006">2006</option>-->
-<!--                                                        <option value="2007">2007</option>-->
-<!--                                                        <option value="2008">2008</option>-->
-<!--                                                        <option value="2009">2009</option>-->
-<!--                                                        <option value="2010">2010</option>-->
-<!--                                                        <option value="2011">2011</option>-->
-<!--                                                        <option value="2012">2012</option>-->
-<!--                                                        <option value="2013">2013</option>-->
-<!--                                                        <option value="2014">2014</option>-->
-<!--                                                        <option value="2015">2015</option>-->
-<!--                                                        <option value="2016">2016</option>-->
-<!--                                                        <option value="2017">2017</option>-->
-<!--                                                    </select>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!---->
-<!--                                        <div class="form-group">-->
-<!--                                            <label class="col-sm-3 control-label">İş haqqında məlumat</label>-->
-<!--                                            <div class="col-sm-9"><textarea name="job_description[]" rows="5" class="form-control" style="min-width:100%; max-width:100%;" type="text"></textarea></div>-->
-<!--                                        </div>-->
-<!---->
-<!--                                        <div class="hr-line-dashed"></div>-->
                                     </div>
                                     <button type="button" onclick="addjob()" class="btn btn-primary btn-circle col-md-offset-6"><i class="fa fa-plus"></i></button>
                                 </div>
