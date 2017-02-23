@@ -178,11 +178,6 @@ class Students
                     }
 
                 }
-
-            } else {
-
-                Student::update($student_id, $serial_id, $first_name, $last_name, $fathers_name,
-                    $birth_date, $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook);
             }
         }
     }
