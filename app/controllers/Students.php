@@ -113,7 +113,7 @@ class Students
 
             $student_ok = false;
 
-            if ($start_year=="ch" || $end_year=="ch") {
+            if (in_array("ch", $start_year) || in_array("ch", $end_year)) {
 
                 $this->error("Zəhmət olmasa təhsil məlumatlarını düzgün daxil edin!");
 

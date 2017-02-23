@@ -21,10 +21,10 @@
       <file leaf-file-name="Students.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Students.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="117" column="86" lean-forward="true" selection-start-line="117" selection-start-column="86" selection-end-line="117" selection-end-column="86" />
+            <state relative-caret-position="180">
+              <caret line="115" column="75" lean-forward="true" selection-start-line="115" selection-start-column="75" selection-end-line="115" selection-end-column="75" />
               <folding>
-                <marker date="1487866440382" expanded="true" signature="640:646" ph=" " />
+                <marker date="1487867373701" expanded="true" signature="640:646" ph=" " />
               </folding>
             </state>
           </provider>
@@ -374,7 +374,7 @@
       <workItem from="1487846054868" duration="81000" />
       <workItem from="1487848607894" duration="84000" />
       <workItem from="1487855402085" duration="5142000" />
-      <workItem from="1487866345869" duration="106000" />
+      <workItem from="1487866345869" duration="1027000" />
     </task>
     <task id="LOCAL-00001" summary="c&#10;">
       <created>1485961599528</created>
@@ -649,11 +649,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487860508368</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="fixed education info reuqired">
+      <created>1487866476423</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1487866476423</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55330000" />
+    <option name="totallyTimeSpent" value="56251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -702,7 +709,8 @@
     <MESSAGE value="added google captcha" />
     <MESSAGE value="edited student controller" />
     <MESSAGE value="added APP const" />
-    <option name="LAST_COMMIT_MESSAGE" value="added APP const" />
+    <MESSAGE value="fixed education info reuqired" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed education info reuqired" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -966,7 +974,6 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/register.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/init.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Students.php" />
     <entry file="file://$PROJECT_DIR$/app/init.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -991,12 +998,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Students.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="115" column="75" lean-forward="true" selection-start-line="115" selection-start-column="75" selection-end-line="115" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Students.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="117" column="86" lean-forward="true" selection-start-line="117" selection-start-column="86" selection-end-line="117" selection-end-column="86" />
+        <state relative-caret-position="180">
+          <caret line="115" column="75" lean-forward="true" selection-start-line="115" selection-start-column="75" selection-end-line="115" selection-end-column="75" />
           <folding>
-            <marker date="1487866440382" expanded="true" signature="640:646" ph=" " />
+            <marker date="1487867373701" expanded="true" signature="640:646" ph=" " />
           </folding>
         </state>
       </provider>
