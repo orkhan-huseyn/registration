@@ -48,13 +48,8 @@ class Students
         {
             $this->error("Zəhmət olmasa bütün xanaları doldurub bir daha cəhd edin.");
 
-        } else if (isset($_POST['start_year']) && isset($_POST['end_year'])) {
+        } else {
 
-            if ($_POST['start_year']=="ch" || $_POST['end_year']) {
-                $this->error("Zəhmət olmasa təhsil məlumatlarını düzgün daxil edin!");
-            }
-
-        }else {
             $student_id          = $_POST['student_id'];
             $serial_id           = $_POST['serial_id'];
             $first_name          = $_POST['first_name'];
@@ -81,7 +76,6 @@ class Students
             $end_year            = $_POST['end_year'];
 
             $education_count = count($education_level);
-
 
             $company = $position = $ex_start_month = $ex_start_year = $ex_end_month = $ex_end_year = $job_description = "";
 
@@ -119,66 +113,74 @@ class Students
 
             $student_ok = false;
 
-            if($student_id==0)
-            {
-                $msg = FormHandler::upload('profile_img', '../..'.APP.'public/img/profile/student/');
+            if ($start_year=="ch" || $end_year=="ch") {
 
-                if($msg=="empty") {
+                $this->error("Zəhmət olmasa təhsil məlumatlarını düzgün daxil edin!");
 
-                    $this->error("Qeydiyyat üçün müvafiq profil şəkli mütləqdir.");
+            } else {
 
-                } else {
+                if($student_id==0)
+                {
+                    $msg = FormHandler::upload('profile_img', '../..'.APP.'public/img/profile/student/');
 
-                    $file_name = $root_path.$msg;
+                    if($msg=="empty") {
 
-                    if (Student::insert($uuid, $serial_id, $file_name, $first_name, $last_name, $fathers_name,$birth_date,
-                        $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook, $direction))
-                    {
-                        $student_ok = true;
-                    }
+                        $this->error("Qeydiyyat üçün müvafiq profil şəkli mütləqdir.");
 
-                    for($i=0; $i < $education_count; $i++)
-                    {
-                        Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]);
-                    }
-
-                    for ($i=0; $i < $experience_count; $i++)
-                    {
-                        if(!empty($company[$i]))
-                        {
-                            Experience::insert(UUID::v4(), $uuid, $company[$i], $position[$i], $job_description[$i],
-                                $ex_start_month[$i].' '.$ex_start_year[$i], $ex_end_month[$i].' '.$ex_end_year[$i]);
-                        }
-                    }
-
-                    for ($i=0; $i < $lang_count; $i++)
-                    {
-                        if ($lang[$i] != "ch")
-                        {
-                            LangKnowledge::insert(UUID::v4(), $uuid, $lang[$i], $lang_level[$i]);
-                        }
-                    }
-
-                    for ($i=0; $i < $it_count; $i++)
-                    {
-                        if(!empty($it[$i]))
-                        {
-                            ItKnowledge::insert(UUID::v4(), $uuid, $it[$i], $it_level[$i]);
-                        }
-                    }
-
-                    if ($student_ok)
-                    {
-
-                        $_SESSION['registered'] = true;
-                        $_SESSION['student_full_name'] = $last_name.' '.$first_name;
-
-                        header('location: '.BASE_DIR.'students/registered/');
                     } else {
-                        $this->error("Zəhmət olmasa bütün xanaları doldurub bir daha cəhd edin.");
-                    }
 
+                        $file_name = $root_path.$msg;
+
+                        if (Student::insert($uuid, $serial_id, $file_name, $first_name, $last_name, $fathers_name,$birth_date,
+                            $birth_place, $gender, $married, $about, $phone_mobile, $phone_home, $address, $email, $facebook, $direction))
+                        {
+                            $student_ok = true;
+                        }
+
+                        for($i=0; $i < $education_count; $i++)
+                        {
+                            Education::insert(UUID::v4(), $uuid, $education_level[$i], $institution[$i], $major[$i], $start_year[$i], $end_year[$i]);
+                        }
+
+                        for ($i=0; $i < $experience_count; $i++)
+                        {
+                            if(!empty($company[$i]))
+                            {
+                                Experience::insert(UUID::v4(), $uuid, $company[$i], $position[$i], $job_description[$i],
+                                    $ex_start_month[$i].' '.$ex_start_year[$i], $ex_end_month[$i].' '.$ex_end_year[$i]);
+                            }
+                        }
+
+                        for ($i=0; $i < $lang_count; $i++)
+                        {
+                            if ($lang[$i] != "ch")
+                            {
+                                LangKnowledge::insert(UUID::v4(), $uuid, $lang[$i], $lang_level[$i]);
+                            }
+                        }
+
+                        for ($i=0; $i < $it_count; $i++)
+                        {
+                            if(!empty($it[$i]))
+                            {
+                                ItKnowledge::insert(UUID::v4(), $uuid, $it[$i], $it_level[$i]);
+                            }
+                        }
+
+                        if ($student_ok)
+                        {
+
+                            $_SESSION['registered'] = true;
+                            $_SESSION['student_full_name'] = $last_name.' '.$first_name;
+
+                            header('location: '.BASE_DIR.'students/registered/');
+                        } else {
+                            $this->error("Zəhmət olmasa bütün xanaları doldurub bir daha cəhd edin.");
+                        }
+
+                    }
                 }
+
             }
         }
     }
