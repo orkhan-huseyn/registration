@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a865a49-6819-4e8d-bc71-d59a30199171" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/student/registered.php" afterPath="$PROJECT_DIR$/app/views/student/registered.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/student/register.php" afterPath="$PROJECT_DIR$/app/views/student/register.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,13 +21,9 @@
       <file leaf-file-name="registered.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/student/registered.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="816">
+              <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -35,10 +31,10 @@
       <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/student/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="262" column="38" lean-forward="true" selection-start-line="262" selection-start-column="38" selection-end-line="262" selection-end-column="38" />
+            <state relative-caret-position="271">
+              <caret line="183" column="65" lean-forward="false" selection-start-line="183" selection-start-column="65" selection-end-line="183" selection-end-column="65" />
               <folding>
-                <marker date="1487759768182" expanded="false" signature="28710:28741" ph="..." />
+                <marker date="1487846083224" expanded="false" signature="28711:28742" ph="..." />
               </folding>
             </state>
           </provider>
@@ -115,9 +111,9 @@
         <option value="$PROJECT_DIR$/public/js/script.js" />
         <option value="$PROJECT_DIR$/app/init.php" />
         <option value="$PROJECT_DIR$/app/lib/FormHandler.php" />
-        <option value="$PROJECT_DIR$/app/views/student/register.php" />
         <option value="$PROJECT_DIR$/app/controllers/Students.php" />
         <option value="$PROJECT_DIR$/app/views/student/registered.php" />
+        <option value="$PROJECT_DIR$/app/views/student/register.php" />
       </list>
     </option>
   </component>
@@ -149,6 +145,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -293,8 +291,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,7 +401,9 @@
       <workItem from="1487658461824" duration="75000" />
       <workItem from="1487662054867" duration="979000" />
       <workItem from="1487690107340" duration="10000" />
-      <workItem from="1487756796706" duration="3106000" />
+      <workItem from="1487756796706" duration="3125000" />
+      <workItem from="1487775591471" duration="379000" />
+      <workItem from="1487846054868" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="c&#10;">
       <created>1485961599528</created>
@@ -617,11 +615,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487759839598</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="made profile picture required">
+      <created>1487759930689</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1487759930689</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49519000" />
+    <option name="totallyTimeSpent" value="49946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -699,7 +704,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1487759768182" expanded="false" signature="28710:28741" ph="..." />
+            <marker date="1487846083224" expanded="false" signature="28711:28742" ph="..." />
           </folding>
         </state>
       </provider>
@@ -737,7 +742,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1487759768182" expanded="false" signature="28710:28741" ph="..." />
+            <marker date="1487846083224" expanded="false" signature="28711:28742" ph="..." />
           </folding>
         </state>
       </provider>
@@ -761,7 +766,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1487759768182" expanded="false" signature="28710:28741" ph="..." />
+            <marker date="1487846083224" expanded="false" signature="28711:28742" ph="..." />
           </folding>
         </state>
       </provider>
@@ -778,7 +783,7 @@
         <state relative-caret-position="12206">
           <caret line="718" column="41" lean-forward="false" selection-start-line="718" selection-start-column="41" selection-end-line="718" selection-end-column="41" />
           <folding>
-            <marker date="1487759768182" expanded="false" signature="28710:28741" ph="..." />
+            <marker date="1487846083224" expanded="false" signature="28711:28742" ph="..." />
           </folding>
         </state>
       </provider>
@@ -795,7 +800,7 @@
         <state relative-caret-position="12206">
           <caret line="718" column="41" lean-forward="true" selection-start-line="718" selection-start-column="41" selection-end-line="718" selection-end-column="41" />
           <folding>
-            <marker date="1487759768182" expanded="false" signature="28710:28741" ph="..." />
+            <marker date="1487846083224" expanded="false" signature="28711:28742" ph="..." />
           </folding>
         </state>
       </provider>
@@ -914,13 +919,7 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/register.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/FamilyInfo.php" />
-    <entry file="file://$PROJECT_DIR$/app/models/FamilyInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/FamilyInfo.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.641/Mobile-Detect-2.8.24/Mobile_Detect.php" />
     <entry file="file://$PROJECT_DIR$/app/lib/Mobile_Detect.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -936,12 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding>
-            <marker date="1487759131027" expanded="true" signature="9359:9379" ph="..." />
-            <marker date="1487759131027" expanded="true" signature="9507:9527" ph="..." />
-            <marker date="1487759131027" expanded="true" signature="10220:10240" ph="..." />
-            <marker date="1487759131027" expanded="true" signature="10666:10686" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -973,22 +966,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/student/registered.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="816">
+          <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/student/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="262" column="38" lean-forward="true" selection-start-line="262" selection-start-column="38" selection-end-line="262" selection-end-column="38" />
+        <state relative-caret-position="271">
+          <caret line="183" column="65" lean-forward="false" selection-start-line="183" selection-start-column="65" selection-end-line="183" selection-end-column="65" />
           <folding>
-            <marker date="1487759768182" expanded="false" signature="28710:28741" ph="..." />
+            <marker date="1487846083224" expanded="false" signature="28711:28742" ph="..." />
           </folding>
         </state>
       </provider>

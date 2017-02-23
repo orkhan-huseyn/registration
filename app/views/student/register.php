@@ -181,7 +181,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Təhsil pilləsi</label>
                                             <div class="col-sm-9">
-                                                <select name="edcation_level[]" id="levels" class="form-control required">
+                                                <select name="education_level[]" id="levels" class="form-control required">
                                                     <option value="Orta">Orta</option>
                                                     <option value="Orta-ixtisas">Orta-ixtisas</option>
                                                     <option value="Tələbə">Tələbə</option>
